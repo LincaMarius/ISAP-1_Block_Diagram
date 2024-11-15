@@ -255,5 +255,14 @@ The described Program Memory Banking model is shown in figure 16.
 
 ![ Figure 16 ](/Pictures/Figure16.png)
 
+## Binary Keyboard
+For any digital system we need a way to interact with it. This is the function of the Input-Output subsystem.
+
+The simplest input system that can be realized is a binary keyboard that allows the transmission of a binary code set by means of 8 switches on the data bus of the ISAP-1 computer.
+
+The connection of this Keyboard to the system buses is shown in figure 17.
+
+![ Figure 17 ](/Pictures/Figure17.png)
+
 
 
