@@ -73,3 +73,19 @@ So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can e
 
 ![ Figure 5 ](/Pictures/Figure5.png)
 
+## Separation of the Central Processing Unit
+I propose to separate the component blocks of the Central Processing Unit from the other blocks of the computer.
+
+Thus, from figure 5 we will remove the following blocks and their associated control signals:
+- Address Select Switches,
+- Program / Run Selector + Deposit,
+- Date Select Switches,
+- Clock and Reset,
+- Address MUX,
+- 16 x 8 RAM,
+- Output Register
+- Binary Display.
+
+The resulting Block Diagram is shown in the following figure
+
+![ Figure 6 ](/Pictures/Figure6.png)
