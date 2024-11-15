@@ -161,3 +161,26 @@ We have an Instruction Set consisting of 31 instructions: 15 instructions with p
 To modify the control signals optimally if we have to execute an extended instruction, the Control Block must receive all 8 bits stored in the Instruction Register. This causes the block diagram of the ISAP-1 computer to change as follows:
 
 ![ Figure 11 ](/Pictures/Figure11.png)
+
+## Improved system design by adding a Constants Generator
+Some instructions implicitly need a constant numeric value in their execution.
+
+One such instruction is the INC instruction which increments a variable by one. Another statement is the SET statement which assigns the value one to a variable. Both instructions need the constant one.
+
+To implement such instructions in the ISAP-1 computer, I introduced a Constant Generator in the block diagram.
+
+The control of the generated number is done by two control signals, so we can generate a maximum of 4 distinct numbers.
+
+The following table shows the correspondence between the order code and the generated number
+
+| Code  | Generated number  |
+|-------|-------------------|
+| 0 | 0 | 0                 |
+| 0 | 1 | 1                 |
+| 1 | 0 | 0                 |
+| 1 | 1 | -1                |
+
+Activation of the EC control signal puts the generated value on the Bus.
+
+The block diagram of the system that has the Constant Generator block implemented is shown in figure 12
+
