@@ -99,3 +99,7 @@ The obvious limitation is given by the size of the programs that can be run of o
 
 The RAM memory is accessed by the SAP-1 computer for reading only. There is no instruction that allows memory to be written, so we can save values ​​in variables.
 
+The system for manual modification of the contents of the RAM memory in the SAP-1 Computer is shown in figure 8
+
+![ Figure 8 ](/Pictures/Figure8.png)
+
