@@ -89,3 +89,14 @@ Thus, from figure 5 we will remove the following blocks and their associated con
 The resulting Block Diagram is shown in the following figure
 
 ![ Figure 6 ](/Pictures/Figure6.png)
+
+Now I have renamed the Memory Address Register as the Address Register
+
+In order to be able to highlight the three buses of the system, we must reverse the positions in the diagram of the Program Counter and the Address Register
+
+![ Figure 7 ](/Pictures/Figure7.png)
+
+The CE signal was renamed DM = Data Memory Select \
+The LM signal was renamed LAR = Load Address Register \
+The LO signal has been renamed I/O \
+I introduced the R/W signal to control the Read/Write operation
