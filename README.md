@@ -174,7 +174,7 @@ The control of the generated number is done by two control signals, so we can ge
 The following table shows the correspondence between the order code and the generated number
 
 | Code  | Generated number  |
-|-------|-------------------|
+|---|---|-------------------|
 | 0 | 0 | 0                 |
 | 0 | 1 | 1                 |
 | 1 | 0 | 0                 |
