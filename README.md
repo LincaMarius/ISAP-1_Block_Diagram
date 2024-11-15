@@ -52,4 +52,15 @@ The Block Diagram with control signals active only high, can be seen in the foll
 
 ![ Figure 4 ](/Pictures/Figure4.png)
 
+## Separation of the Central Processing Unit
+I propose to separate the component blocks of the Central Processing Unit from the other blocks of the computer.
+
+Thus, from figure 4 we will remove the following blocks and their associated control signals:
+- 16 x 8 RAM,
+- Output Register
+- Binary Display.
+
+The resulting block diagram is shown in the following figure
+
+![ Figure 5 ](/Pictures/Figure5.png)
 
