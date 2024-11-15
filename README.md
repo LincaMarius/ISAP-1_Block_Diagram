@@ -20,7 +20,7 @@ In the following figure, I present a reproduction of the original block diagram 
 
 ![ Figure 1 ](/Pictures/Figure1.png)
 
-## Identification of Computer Components
+### Identification of Computer Components
 As we learned in school, a computer can be represented by 3 distinct functional blocks:
 - CPU,
 - Memory
@@ -42,3 +42,14 @@ If we check the diagram of the SAP-1 computer we notice that these functional bl
 So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can easily separate these elements: CPU, RAM and I/O, as well as we can easily identify the three buses. We get the following block diagram.
 
 ![ Figure 3 ](/Pictures/Figure3.png)
+
+### Block Diagram with control signals active only high
+In the diagram in figure 3 it can be seen that some of the control signals are active high and some are active low. This is due to the fact that the circuit diagram is optimized for the TTL integrated circuits used by the authors of the original design of the SAP-1 computer.
+
+To simplify and ease the process of designing the Control Block I propose that in this phase of the design we use only active high control signals. Thus, the time charts will be easier to understand.
+
+The Block Diagram with control signals active only high, can be seen in the following figure.
+
+![ Figure 4 ](/Pictures/Figure4.png)
+
+
