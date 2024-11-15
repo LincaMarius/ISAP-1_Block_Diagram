@@ -175,11 +175,12 @@ The following table shows the correspondence between the order code and the gene
 
 | Code  | Generated number  |
 |-------|-------------------|
+|---|---|-------------------|
 | 0 | 0 | 0                 |
 | 0 | 1 | 1                 |
 | 1 | 0 | 0                 |
 | 1 | 1 | -1                |
-|---|---|-------------------|
+
 
 Activation of the EC control signal puts the generated value on the Bus.
 
@@ -188,3 +189,20 @@ The block diagram of the system that has the Constant Generator block implemente
 ![ Figure 12 ](/Pictures/Figure12.png)
 
 By adding the Constants Generator it is possible to implement the instructions SET (Set Accumulator), CLR (Clear Accumulator), INC (Increment Accumulator), DEC (Decrement Accumulator).
+
+## Improved system design by adding Stack
+I decided to add stack operations to this calculator. Thus, I can implement calling subroutines as a first benefit. The stack also provides the ability to store data temporarily.
+
+We will use a 4-bit register for the stack since the address is 4-bit. This register must be able to be incremented as well as decremented.
+
+For this purpose we can use a counter. It must be able to be incremented but also decremented.
+
+New instructions such as: PUSH, POP, CALL, RET, JMP FAR can now be implemented.
+
+The block diagram of the system that has the Stack Pointer implemented is shown in figure 13.
+
+![ Figure 13 ](/Pictures/Figure13.png)
+
+Since the available RAM is only 16 bytes we decided Stiva to use a separate RAM, so it doesn't reduce the space available for program variables.
+
+Since the Stack doesn't use the computer's RAM, but has its own RAM, the Stack's growth direction doesn't matter.
