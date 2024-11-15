@@ -27,3 +27,17 @@ In the following figure, I present a reproduction of the original block diagram 
 ### More detailed block diagram
 I studied the original schematic of the SAP-1 computer and recreated the block diagram to represent the actual functional blocks as closely as possible and I present it in the following figure.
 
+![ Figure 2 ](/Pictures/Figure2.png)
+
+The programming mode of the SAP-1 computer described by the authors is as follows:
+a.	Move selector S2 to the PROG position to enter Programming mode, \
+b.	The memory address to be modified is selected with switches S1, \
+c.	Select with the S3 switches the Data that you want to be written to the memory at the previously set address, \
+d.	Press button S4 to write the new value to memory, \
+e.	Repeat steps b, c and d until all necessary changes have been made, \
+f.	Move selector S2 to the RUN position, to run the program.
+
+In practice, the content of the RAM memory is edited, after which its content is only read by the computer.
+
+This computer has no instruction to write data to memory. This is specific to read-only ROMs. So, one ROM can be used for each program.
+
