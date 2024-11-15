@@ -52,7 +52,7 @@ The Block Diagram with control signals active only high, can be seen in the foll
 
 ![ Figure 4 ](/Pictures/Figure4.png)
 
-## Separation of the Central Processing Unit
+### Separation of the Central Processing Unit
 I propose to separate the component blocks of the Central Processing Unit from the other blocks of the computer.
 
 Thus, from figure 4 we will remove the following blocks and their associated control signals:
@@ -74,5 +74,28 @@ The CE signal was renamed DM = Data Memory Select \
 The LM signal was renamed LAR = Load Address Register \
 The LO signal has been renamed I/O \
 
-Acesta este procesorul SAP-1 original.
+This is the original SAP-1 processor.
+
+### SAP-1 Computer Architecture
+The architecture of the SAP-1 computer up to this point is as follows:
+
+![ Figure 7 ](/Pictures/Figure7.png)
+
+We can distinguish the three subsystems of the computer:
+- The SAP-1 CPU
+- The Memory Subsystem
+- Inputs/Outputs Subsystem
+
+They are interconnected through the three buses:
+- 4-bit address bus
+- 8-bit data bus
+- 4-bit commands bus
+
+The available address space for the SAP-1 computer in this structure is:
+- 16 Bytes of Program and Data Memory
+- 1 Output Devices
+
+The obvious limitation is given by the size of the programs that can be run of only 16 bytes.
+
+The RAM memory is accessed by the SAP-1 computer for reading only. There is no instruction that allows memory to be written, so we can save values ​​in variables.
 
