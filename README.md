@@ -64,3 +64,15 @@ The resulting block diagram is shown in the following figure
 
 ![ Figure 5 ](/Pictures/Figure5.png)
 
+Now I have renamed the Memory Address Register as the Address Register.
+
+In order to be able to highlight the three buses of the system, we must reverse the positions in the diagram of the Program Counter and the Address Register.
+
+![ Figure 6 ](/Pictures/Figure6.png)
+
+The CE signal was renamed DM = Data Memory Select \
+The LM signal was renamed LAR = Load Address Register \
+The LO signal has been renamed I/O \
+
+Acesta este procesorul SAP-1 original.
+
