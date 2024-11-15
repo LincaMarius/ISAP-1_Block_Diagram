@@ -103,3 +103,13 @@ The system for manual modification of the contents of the RAM memory in the SAP-
 
 ![ Figure 8 ](/Pictures/Figure8.png)
 
+The program cannot change the contents of the memory. The operator can only edit the RAM contents in Programming mode using a series of switches.
+
+So, RAM from the point of view of the available Instruction Set can be viewed as ROM Memory.
+
+The input-output system is very simple and consists of a Binary Display. This is shown in figure 9.
+
+![ Figure 9 ](/Pictures/Figure9.png)
+
+It is noted that it does not have a specific address. It basically displays the information present on the Data Bus if the I/O control signal is active (originally called LO), and when the positive edge of the clock signal is present.
+
