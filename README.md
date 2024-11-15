@@ -20,3 +20,25 @@ In the following figure, I present a reproduction of the original block diagram 
 
 ![ Figure 1 ](/Pictures/Figure1.png)
 
+## Identification of Computer Components
+As we learned in school, a computer can be represented by 3 distinct functional blocks:
+- CPU,
+- Memory
+- I/O.
+
+They are interconnected through 3 buses that form the system bus:
+- data bus,
+- address bus
+- the control bus.
+
+This fact is also presented by the authors in the book in a simplified form on page 213 in figure 13-1.
+
+A diagram representing a computing system consisting of functional blocks CPU, RAM, I/O and buses is presented in the following figure.
+
+![ Figure 2 ](/Pictures/Figure2.png)
+
+If we check the diagram of the SAP-1 computer we notice that these functional blocks are not grouped, we also cannot identify the three buses on the diagram. We are presented with only one bus labeled "W bus".
+
+So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can easily separate these elements: CPU, RAM and I/O, as well as we can easily identify the three buses. We get the following block diagram.
+
+![ Figure 3 ](/Pictures/Figure3.png)
