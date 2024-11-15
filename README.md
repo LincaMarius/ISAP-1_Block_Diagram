@@ -41,3 +41,11 @@ In practice, the content of the RAM memory is edited, after which its content is
 
 This computer has no instruction to write data to memory. This is specific to read-only ROMs. So, one ROM can be used for each program.
 
+### Block diagram where only active high control signals are used
+In the diagram in figure 2 it can be seen that some of the control signals are active high and some are active low. This is due to the fact that the circuit diagram is optimized for the TTL integrated circuits used by the authors of the original design of the SAP-1 computer.
+
+To simplify and ease the process of designing the Control Block I propose that in this phase of the design we use only active high control signals. Thus, the time charts will be easier to understand.
+
+The Block Diagram where only active high control signals are used, can be seen in the following figure.
+
+![ Figure 3 ](/Pictures/Figure3.png)
