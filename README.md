@@ -112,4 +112,16 @@ ISAP-1 architecture CPU with loadable Program Counter
 
 The ability to load numeric values into the Program Counter allows us to extend the computer's instruction set by implementing conditional jump and unconditional jump instructions.
 
+## Improved system design by adding Flags
+To run more advanced programs that need conditional jumps, we have to use flags that show us particulars of the result of the last arithmetic operation performed. These result characteristics can be determined by evaluating the values of the Flags.
+
+These flags can be tested individually or grouped, for this system I will use a selector for flags, so only one condition is tested at a time.
+
+The Block Diagram of the ISAP-1 cpmputer that also has the Flags Register is shown in figure 9
+
+![ Figure 9 ](/Pictures/Figure9.png)
+
+I added the following control signals:
+- PM – Program Memory – activates operations with Program Memory. In the case of the ISAP-1 computer we will have a ROM memory.
+- INT – input from the I/O subsystem for activating the interrupt system
 
