@@ -125,3 +125,17 @@ I added the following control signals:
 - PM – Program Memory – activates operations with Program Memory. In the case of the ISAP-1 computer we will have a ROM memory.
 - INT – input from the I/O subsystem for activating the interrupt system
 
+## Improved system design by loading the lower Nibble and upper Nibble of the Accumulator register separately
+To run programs that allow immediate values to be loaded into the 8-bit Accumulator Register, since the Load Accumulator Immediate (LAI) instruction allows 4-bit values equivalent to a nibble, I decided to implement two separate instructions.
+
+-	LIL instruction – Load immediate value into lower Nibble
+-	LIH instruction – Load immediate value into upper Nibble.
+
+The block diagram of the system that has the Accumulator register with separate charge signals for each nibble is shown in figure 10
+
+![ Figure 10 ](/Pictures/Figure10.png)
+
+The control signal LA is replaced by two new control signals:
+-	LAL – Lower Accumulator Nibble Register Load
+-	LAH – Upper Accumulator Nibble Register Load.
+
