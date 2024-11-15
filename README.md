@@ -264,5 +264,11 @@ The connection of this Keyboard to the system buses is shown in figure 17.
 
 ![ Figure 17 ](/Pictures/Figure17.png)
 
+## Binary Display
+The simplest output device that can be connected to this computer is a Binary Display. This device is also used in the original construction of the SAP-1 computer, where it is integrated directly into the structure of this computer.
+
+My modified version that allows connection to the ISAP-1 computer buses is shown in figure 18.
+
+![ Figure 18 ](/Pictures/Figure18.png)
 
 
