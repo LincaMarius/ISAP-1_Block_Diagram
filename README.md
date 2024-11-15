@@ -49,3 +49,21 @@ To simplify and ease the process of designing the Control Block I propose that i
 The Block Diagram where only active high control signals are used, can be seen in the following figure.
 
 ![ Figure 3 ](/Pictures/Figure3.png)
+
+## Identification of computer components
+As we learned in school, a computer can be represented by 3 distinct functional blocks:
+- CPU,
+- Memory
+- I/O.
+
+They are interconnected through 3 buses that form the system bus:
+- data bus,
+- address bus
+- the control bus.
+
+This fact is also presented by the authors in the book in a simplified form on page 213 in figure 13-1.
+
+A diagram representing a computing system consisting of functional blocks CPU, RAM, I/O and buses is presented in the following figure.
+
+![ Figure 4 ](/Pictures/Figure4.png)
+
