@@ -174,13 +174,17 @@ The control of the generated number is done by two control signals, so we can ge
 The following table shows the correspondence between the order code and the generated number
 
 | Code  | Generated number  |
-|---|---|-------------------|
+|-------|-------------------|
 | 0 | 0 | 0                 |
 | 0 | 1 | 1                 |
 | 1 | 0 | 0                 |
 | 1 | 1 | -1                |
+|---|---|-------------------|
 
 Activation of the EC control signal puts the generated value on the Bus.
 
 The block diagram of the system that has the Constant Generator block implemented is shown in figure 12
 
+![ Figure 12 ](/Pictures/Figure12.png)
+
+By adding the Constants Generator it is possible to implement the instructions SET (Set Accumulator), CLR (Clear Accumulator), INC (Increment Accumulator), DEC (Decrement Accumulator).
