@@ -14,9 +14,7 @@ https://github.com/LincaMarius
 ## About the project, brief description
 The goal of this project is to create a more efficient version of the SAP (Simple As Possible) computer, but with minimal changes.
 
-## Design improvement by analyzing and modifying the block diagram of the SAP-1 computer
-
-### Original Block Diagram
+## Original SAP-1 Computer Block Diagram
 
 The original Block Diagram of the SAP-1 computer can be found in the book "Digital Computer Electronics" by Albert Paul Malvino and Jerald A. Brown, on page 141 and is labeled Figure 10-1.
 
@@ -24,7 +22,7 @@ In the following figure, I present a reproduction of the original block diagram 
 
 ![ Figure 1 ](/Pictures/Figure1.png)
 
-### More detailed block diagram
+## More detailed block diagram
 I studied the original schematic of the SAP-1 computer and recreated the block diagram to represent the actual functional blocks as closely as possible and I present it in the following figure.
 
 ![ Figure 2 ](/Pictures/Figure2.png)
@@ -41,7 +39,7 @@ In practice, the content of the RAM memory is edited, after which its content is
 
 This computer has no instruction to write data to memory. This is specific to read-only ROMs. So, one ROM can be used for each program.
 
-### Block diagram where only active high control signals are used
+## Block diagram where only active high control signals are used
 In the diagram in figure 2 it can be seen that some of the control signals are active high and some are active low. This is due to the fact that the circuit diagram is optimized for the TTL integrated circuits used by the authors of the original design of the SAP-1 computer.
 
 To simplify and ease the process of designing the Control Block I propose that in this phase of the design we use only active high control signals. Thus, the time charts will be easier to understand.
@@ -117,7 +115,7 @@ To run more advanced programs that need conditional jumps, we have to use flags 
 
 These flags can be tested individually or grouped, for this system I will use a selector for flags, so only one condition is tested at a time.
 
-The Block Diagram of the ISAP-1 cpmputer that also has the Flags Register is shown in figure 9
+The Block Diagram of the ISAP-1 computer that also has the Flags Register is shown in figure 9
 
 ![ Figure 9 ](/Pictures/Figure9.png)
 
@@ -173,12 +171,12 @@ The control of the generated number is done by two control signals, so we can ge
 
 The following table shows the correspondence between the order code and the generated number
 
-| A | C | Generated number  |
-|---|---|-------------------|
-| 0 | 0 | 0                 |
-| 0 | 1 | 1                 |
-| 1 | 0 | 0                 |
-| 1 | 1 | -1                |
+| C2 | C1 | Generated number  | Binary |
+|----|----|-------------------|--------|
+| 0  | 0  |  0                | 0000   |
+| 0  | 1  |  1                | 0001   |
+| 1  | 0  | -2                | 1110   |
+| 1  | 1  | -1                | 1111   |
 
 
 Activation of the EC control signal puts the generated value on the Bus.
@@ -202,7 +200,7 @@ The block diagram of the system that has the Stack Pointer implemented is shown 
 
 ![ Figure 13 ](/Pictures/Figure13.png)
 
-Since the available RAM is only 16 bytes we decided Stiva to use a separate RAM, so it doesn't reduce the space available for program variables.
+Since the available RAM is only 16 bytes we decided Stack to use a separate RAM, so it doesn't reduce the space available for program variables.
 
 Since the Stack doesn't use the computer's RAM, but has its own RAM, the Stack's growth direction doesn't matter.
 
@@ -268,5 +266,3 @@ The simplest output device that can be connected to this computer is a Binary Di
 My modified version that allows connection to the ISAP-1 computer buses is shown in figure 18.
 
 ![ Figure 18 ](/Pictures/Figure18.png)
-
-
