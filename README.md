@@ -98,38 +98,6 @@ The CE signal was renamed DM = Data Memory Select \
 The LM signal was renamed LAR = Load Address Register \
 The LO signal has been renamed I/O
 
-## Improved system design by adding Stack
-I decided to add stack operations to this calculator. Thus, I can implement calling subroutines as a first benefit. The stack also provides the ability to store data temporarily.
-
-We will use a 4-bit register for the stack since the address is 4-bit. This register must be able to be incremented as well as decremented.
-
-For this purpose we can use a counter. It must be able to be incremented but also decremented.
-
-New instructions such as: PUSH, POP, CALL, RET, JMP FAR can now be implemented.
-
-The block diagram of the system that has the Stack Pointer implemented is shown in figure 13.
-
-![ Figure 13 ](/Pictures/Figure13.png)
-
-Since the available RAM is only 16 bytes we decided Stack to use a separate RAM, so it doesn't reduce the space available for program variables.
-
-Since the Stack doesn't use the computer's RAM, but has its own RAM, the Stack's growth direction doesn't matter.
-
-## Improving Arithmetic and Logical capabilities
-The basic structure of the SAP-1 calculator can only perform Addition and Subtraction operations.
-
-To expand the operations that can be performed with this computer, a Logical Unit is added to allow the realization of shifting operations or logical operations at the bit level.
-
-For this purpose, the new Logical and Arithmetic Unit requires several control signals. We have replaced the old control signal denoted SU with a group of control signals called FUNC.
-
-Depending on the number of functions implemented, the number of control signals can be between 2 and 5, so between 4 and 32 functions can be executed.
-
-For the ISAP-1 computer, I chose 3 control lines for the Logical and Arithmetic Unit command, involving the execution of a maximum of 8 functions.
-
-The block diagram for the ISAP-1 computer using an ALU unit is shown in figure 14.
-
-![ Figure 14 ](/Pictures/Figure14.png)
-
 ## Improvement of SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
 
