@@ -22,7 +22,7 @@ In the following figure, I present a reproduction of the original block diagram 
 
 ![ Figure 1 ](/Pictures/Figure1.png)
 
-## More detailed block diagram
+### More detailed block diagram
 I studied the original schematic of the SAP-1 computer and recreated the block diagram to represent the actual functional blocks as closely as possible and I present it in the following figure.
 
 ![ Figure 2 ](/Pictures/Figure2.png)
@@ -39,7 +39,7 @@ In practice, the content of the RAM memory is edited, after which its content is
 
 This computer has no instruction to write data to memory. This is specific to read-only ROMs. So, one ROM can be used for each program.
 
-## Block diagram where only active high control signals are used
+### Block diagram where only active high control signals are used
 In the diagram in figure 2 it can be seen that some of the control signals are active high and some are active low. This is due to the fact that the circuit diagram is optimized for the TTL integrated circuits used by the authors of the original design of the SAP-1 computer.
 
 To simplify and ease the process of designing the Control Block, I propose that in this phase of the design we use only active high control signals. Thus, the time charts will be easier to understand.
@@ -48,16 +48,16 @@ The Block Diagram where only active high control signals are used, can be seen i
 
 ![ Figure 3 ](/Pictures/Figure3.png)
 
-## Identification of computer components
+### Identification of computer components
 As we learned in school, a computer can be represented by 3 distinct functional blocks:
 - CPU,
 - Memory
 - I/O.
 
 They are interconnected through 3 buses that form the system bus:
-- data bus,
-- address bus
-- the control bus.
+- Data Bus,
+- Address Bus
+- Control Bus.
 
 This fact is also presented by the authors in the book in a simplified form on page 213 in figure 13-1.
 
@@ -71,7 +71,7 @@ So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can e
 
 ![ Figure 5 ](/Pictures/Figure5.png)
 
-## Separation of the Central Processing Unit
+### Separation of the Central Processing Unit
 I propose to separate the component blocks of the Central Processing Unit from the other blocks of the computer.
 
 Thus, from figure 5 we will remove the following blocks and their associated control signals:
@@ -96,8 +96,7 @@ In order to be able to highlight the three buses of the system, we must reverse 
 
 The CE signal was renamed DM = Data Memory Select \
 The LM signal was renamed LAR = Load Address Register \
-The LO signal has been renamed I/O \
-I introduced the R/W signal to control the Read/Write operation
+The LO signal has been renamed I/O
 
 ## Improved design by adding possibility for Program Counter to be preset
 From the block diagram it can be seen that the Program Counter cannot be loaded with a desired value, thus we do not have the possibility to make Unconditional Jumps in the execution of the running programs
