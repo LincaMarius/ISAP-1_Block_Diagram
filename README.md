@@ -98,50 +98,32 @@ The CE signal was renamed DM = Data Memory Select \
 The LM signal was renamed LAR = Load Address Register \
 The LO signal has been renamed I/O
 
-## Improvement of SAP-1 computer architecture
+### SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
 
-![ Figure 15 ](/Pictures/Figure15.png)
+![ Figure 8 ](/Pictures/Figure8.png)
 
 We can distinguish the three subsystems of the computer:
-- The ISAP-1 CPU
+- The SAP-1 CPU
 - The Memory Subsystem
-- Inputs/Outputs Subsystem
+- Outputs Subsystem
 
 They are interconnected through the three buses:
-- 4-bit address bus
-- 8-bit data bus
-- 5-bit commands bus
+- 4-bit Address Bus
+- 8-bit Data Bus
+- 4-bit Control Bus
 
-The available address space for the ISAP-1 computer in this structure is:
-- 16 bytes of Program Memory
-- 16 bytes of Data Memory
-- 16 bytes Stack
-- 16 Input-Output Devices
+The available address space for the SAP-1 computer in this structure is:
+- 16 bytes of Program and Data Memory
+- 1 Output Devices
 
-The obvious limitation is given by the size of the programs that can be run of only 16 bytes.
+The obvious limitation is given by the size of the programs that can be run of only 16 Bytes.
 
-For this purpose, I propose the implementation of a Program Memory Banking system. This is done by using an external register that will be addressed as an Input-Output device. This register will be 8 bits.
-
-So, the addressable Program Memory capacity will increase from 16 bytes to:
-2^8 * 16 bytes = 256 * 16 bytes = 4096 bytes
-
-The described Program Memory Banking model is shown in figure 16.
-
-![ Figure 16 ](/Pictures/Figure16.png)
-
-## Binary Keyboard
-For any digital system we need a way to interact with it. This is the function of the Input-Output subsystem.
-
-The simplest input system that can be realized is a binary keyboard that allows the transmission of a binary code set by means of 8 switches on the data bus of the ISAP-1 computer.
-
-The connection of this Keyboard to the system buses is shown in figure 17.
-
-![ Figure 17 ](/Pictures/Figure17.png)
-
-## Binary Display
-The simplest output device that can be connected to this computer is a Binary Display. This device is also used in the original construction of the SAP-1 computer, where it is integrated directly into the structure of this computer.
+### Binary Display
+The simplest output device that can be connected to this computer is a Binary Display. This device is used in the original construction of the SAP-1 computer, where it is integrated directly into the structure of this computer.
 
 My modified version that allows connection to the ISAP-1 computer buses is shown in figure 18.
 
-![ Figure 18 ](/Pictures/Figure18.png)
+![ Figure 9 ](/Pictures/Figure9.png)
+
+The output device consists of a register where 8 bits are written when the I/O control signal is activated and the rising edge of the clock occurs. Each bit from the output of this register is connected to an LED. This is a Binary Display.
