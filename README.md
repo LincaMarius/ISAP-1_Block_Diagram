@@ -138,7 +138,9 @@ The Block Diagram of the Memory Block in Programming Mode is as follows
 
 ![ Figure 12 ](/Pictures/Figure12.png)
 
+From this Diagram the Multiplexer can be ignored and we can obtain a simpler and easier to understand Diagram.
 
+![ Figure 13 ](/Pictures/Figure13.png)
 
 
 
