@@ -124,6 +124,22 @@ From this Diagram the Multiplexer can be ignored and we can obtain a simpler and
 
 ![ Figure 11 ](/Pictures/Figure11.png)
 
+Thus, the Memory of the SAP-1 Computer in Run Mode is used as a ROM memory. Control input #CE if high disables the output which is three-state, and if low at the output, the data from the address selected by the Memory Address Register is presented on the Bus.
+
+In this case, the CE control signal has the OE (Output Enable) function specific to ROM memories.
+
+When switch S2 is in the Program Position, the PGM signal is high and causes the Address Multiplexer to select the address from the input connected to Address Select Switches S1.
+
+The control input #CE is set low, so at the Memory output, the Data from the Address selected by the Address Select Switches S1 are presented on the Bus.
+
+If the S4 (Deposit) switch is pressed, the #W control signal is set to the low value, which causes the Data present at the input pins whose values are set by the switches marked S3 (Data Select Switches) to be written to the Selected Address.
+
+The Block Diagram of the Memory Block in Programming Mode is as follows
+
+![ Figure 12 ](/Pictures/Figure12.png)
+
+
+
 
 
 
