@@ -120,6 +120,12 @@ The Diagram of the Memory Block in Run Mode is as follows
 
 ![ Figure 10 ](/Pictures/Figure10.png)
 
+From this Diagram the Multiplexer can be ignored and we can obtain a simpler and easier to understand Diagram.
+
+![ Figure 11 ](/Pictures/Figure11.png)
+
+
+
 
 ### SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
