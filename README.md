@@ -153,7 +153,7 @@ So, functionally speaking, the Memory is simply a ROM for the SAP-1 computer.
 ### SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
 
-![ Figure 8 ](/Pictures/Figure8.png)
+![ Figure 15 ](/Pictures/Figure15.png)
 
 We can distinguish the three subsystems of the computer:
 - The SAP-1 CPU
@@ -163,7 +163,7 @@ We can distinguish the three subsystems of the computer:
 They are interconnected through the three buses:
 - 4-bit Address Bus
 - 8-bit Data Bus
-- 4-bit Control Bus
+- 5-bit Control Bus
 
 The available address space for the SAP-1 computer in this structure is:
 - 16 bytes of Program and Data Memory
