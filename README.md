@@ -96,7 +96,21 @@ In order to be able to highlight the three buses of the system, we must reverse 
 
 The CE signal was renamed DM = Data Memory Select \
 The LM signal was renamed LAR = Load Address Register \
-The LO signal has been renamed I/O
+The LO signal was renamed I/O = Input/Output Device Select
+
+### Binary Display
+The simplest output device that can be connected to this computer is a Binary Display. This device is used in the original construction of the SAP-1 computer, where it is integrated directly into the structure of this computer.
+
+My version of the Block Diagram is identical to the original, except that I treated the original Output Register as a standalone block that is connected to the system buses as an Input/Output Device.
+
+![ Figure 8 ](/Pictures/Figure8.png)
+
+The output device consists of a register where 8 bits are written when the I/O control signal is activated and the rising edge of the clock occurs. Each bit from the output of this register is connected to an LED. This is a Binary Display.
+
+
+
+
+
 
 ### SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
@@ -118,12 +132,3 @@ The available address space for the SAP-1 computer in this structure is:
 - 1 Output Devices
 
 The obvious limitation is given by the size of the programs that can be run of only 16 Bytes.
-
-### Binary Display
-The simplest output device that can be connected to this computer is a Binary Display. This device is used in the original construction of the SAP-1 computer, where it is integrated directly into the structure of this computer.
-
-My modified version that allows connection to the ISAP-1 computer buses is shown in figure 18.
-
-![ Figure 9 ](/Pictures/Figure9.png)
-
-The output device consists of a register where 8 bits are written when the I/O control signal is activated and the rising edge of the clock occurs. Each bit from the output of this register is connected to an LED. This is a Binary Display.
