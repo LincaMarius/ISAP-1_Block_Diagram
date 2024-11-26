@@ -107,9 +107,18 @@ My version of the Block Diagram is identical to the original, except that I trea
 
 The output device consists of a register where 8 bits are written when the I/O control signal is activated and the rising edge of the clock occurs. Each bit from the output of this register is connected to an LED. This is a Binary Display.
 
+### Memory Subsystem
+Figure 9 shows the Memory block of the SAP-1 computer.
 
+![ Figure 9 ](/Pictures/Figure9.png)
 
+The Memory has two operating modes, dictated by the position of switch S2.
 
+When S2 is in the Run position, the PGM signal is low and causes the Address Multiplexer to select the Address from the input connected to the Memory Address Register. Also, the CE control signal is connected to the #CE control pin of the RAM.
+
+The Diagram of the Memory Block in Run Mode is as follows
+
+![ Figure 10 ](/Pictures/Figure10.png)
 
 
 ### SAP-1 computer architecture
