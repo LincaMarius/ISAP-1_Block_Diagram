@@ -142,8 +142,13 @@ From this Diagram the Multiplexer can be ignored and we can obtain a simpler and
 
 ![ Figure 13 ](/Pictures/Figure13.png)
 
+Since no Data is read from the Bus, so no Data is transferred to the Bus, this can also be ignored.
 
+![ Figure 14 ](/Pictures/Figure14.png)
 
+We can conclude that in programming mode the Memory is functionally separate from the SAP-1 computer.
+
+So, functionally speaking, the Memory is simply a ROM for the SAP-1 computer.
 
 ### SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
