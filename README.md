@@ -7,7 +7,7 @@ This is the first stage of the design of the ISAP-1 computer and consists of the
 
 By: Lincă Marius Gheorghe.
 
-Pitești, Argeș, România, Europe.
+Pitești, Argeș, Romania, Europe.
 
 https://github.com/LincaMarius
 
@@ -27,8 +27,8 @@ I studied the original schematic of the SAP-1 computer and recreated the block d
 
 ![ Figure 2 ](/Pictures/Figure2.png)
 
-The programming mode of the SAP-1 computer described by the authors is as follows:
-a.	Move selector S2 to the PROG position to enter Programming mode, \
+The programming mode of the SAP-1 computer described by the authors is as follows: \
+a.	Move selector S2 to the PROG position to enter Programming Mode, \
 b.	The memory address to be modified is selected with switches S1, \
 c.	Select with the S3 switches the Data that you want to be written to the memory at the previously set address, \
 d.	Press button S4 to write the new value to memory, \
@@ -99,7 +99,7 @@ The LM signal was renamed LAR = Load Address Register \
 The LO signal was renamed I/O = Input/Output Device Select
 
 ### Binary Display
-The simplest output device that can be connected to this computer is a Binary Display. This device is used in the original construction of the SAP-1 computer, where it is integrated directly into the structure of this computer.
+The simplest output device that can be connected to this computer is a Binary Display. This device is used in the original construction of the SAP-1 Computer, where it is integrated directly into the structure of this computer.
 
 My version of the Block Diagram is identical to the original, except that I treated the original Output Register as a standalone block that is connected to the system buses as an Input/Output Device.
 
@@ -126,7 +126,7 @@ From this Diagram the Multiplexer can be ignored and we can obtain a simpler and
 
 Thus, the Memory of the SAP-1 Computer in Run Mode is used as a ROM memory. Control input #CE if high disables the output which is three-state, and if low at the output, the data from the address selected by the Memory Address Register is presented on the Bus.
 
-In this case, the CE control signal has the OE (Output Enable) function specific to ROM memories.
+In this case, the CE control signal has the #CE function for chip activation but also the #OE (Output Enable) function specific to ROM memories.
 
 When switch S2 is in the Program Position, the PGM signal is high and causes the Address Multiplexer to select the address from the input connected to Address Select Switches S1.
 
