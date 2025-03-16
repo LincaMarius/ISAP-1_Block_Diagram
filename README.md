@@ -165,7 +165,8 @@ They are interconnected through the three buses:
 - 5-bit Control Bus
 
 The available address space for the SAP-1 computer in this structure is:
-- 16 bytes of Program and Data Memory
+- 16 bytes of Program Memory
 - 1 Output Devices
 
-The obvious limitation is given by the size of the programs that can be run of only 16 Bytes.
+The obvious limitation is given by the size of the programs that can be run, which is only 16 bytes, the computer cannot retain the values ​​of some variables because it cannot write to memory, and jumps cannot be made in the program to perform repetitive tasks.
+
