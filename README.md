@@ -149,10 +149,16 @@ We can conclude that in programming mode the Memory is functionally separate fro
 
 So, functionally speaking, the Memory is simply a ROM for the SAP-1 computer.
 
+We can synthesize a Block Diagram for the Memory Subsystem of the SAP-1 and ISAP-1 computers
+
+![ Figure 15 ](/Pictures/Figure15.png)
+
+We can see an increased complexity of the Memory Subsystem imposed by the need to modify the contents of the Memory using the Control Panel switches.
+
 ### SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
 
-![ Figure 15 ](/Pictures/Figure15.png)
+![ Figure 16 ](/Pictures/Figure16.png)
 
 We can distinguish the three subsystems of the computer:
 - The SAP-1 CPU
