@@ -5,7 +5,7 @@ ISAP Computer stands for Improved Simple as Possible Computer
 
 This is the first stage of the design of the ISAP-1 computer and consists of the process of optimizing the functionality of the SAP-1 computer at the block diagram level.
 
-By: Lincă Marius Gheorghe.
+By: Lincă Marius Gheorghe,
 
 Pitești, Argeș, Romania, Europe.
 
@@ -42,7 +42,7 @@ This computer has no instruction to write data to memory. This is specific to re
 ### Block diagram where only active high control signals are used
 In the diagram in figure 2 it can be seen that some of the control signals are active high and some are active low. This is due to the fact that the circuit diagram is optimized for the TTL integrated circuits used by the authors of the original design of the SAP-1 computer.
 
-To simplify and ease the process of designing the Control Block, I propose that in this phase of the design we use only active high control signals. Thus, the time charts will be easier to understand.
+To simplify and ease the Control Block design process, I propose that in this phase of the design we only use active High control signals. This way, the Timing Diagrams in the chapter where we will study the Instruction Set will be easier to understand.
 
 The Block Diagram where only active high control signals are used, can be seen in the following figure.
 
@@ -54,12 +54,12 @@ As we learned in school, a computer can be represented by 3 distinct functional 
 - Memory
 - I/O.
 
-They are interconnected through 3 buses that form the system bus:
+They are interconnected through 3 buses that form the System Bus:
 - Data Bus,
 - Address Bus
 - Control Bus.
 
-This fact is also presented by the authors in the book in a simplified form on page 213 in figure 13-1.
+This fact is also presented by the authors in the Book in a simplified form on page 213 in figure 13-1.
 
 A diagram representing a computing system consisting of functional blocks CPU, RAM, I/O and buses is presented in the following figure.
 
@@ -78,7 +78,6 @@ Thus, from figure 5 we will remove the following blocks and their associated con
 - Address Select Switches,
 - Program / Run Selector + Deposit,
 - Date Select Switches,
-- Clock and Reset,
 - Address MUX,
 - 16 x 8 RAM,
 - Output Register
@@ -94,9 +93,9 @@ In order to be able to highlight the three buses of the system, we must reverse 
 
 ![ Figure 7 ](/Pictures/Figure7.png)
 
-The CE signal was renamed DM = Data Memory Select \
+The CE signal was renamed PM = Program Memory select \
 The LM signal was renamed LAR = Load Address Register \
-The LO signal was renamed I/O = Input/Output Device Select
+The LO signal was renamed I/O = Input/Output Device select
 
 ### Binary Display
 The simplest output device that can be connected to this computer is a Binary Display. This device is used in the original construction of the SAP-1 Computer, where it is integrated directly into the structure of this computer.
