@@ -27,20 +27,20 @@ I studied the original schematic of the SAP-1 Computer and recreated the Block D
 
 ![ Figure 2 ](/Pictures/Figure2.png)
 
-The programming mode of the SAP-1 computer described by the authors is as follows: \
+The programming mode of the SAP-1 Computer described by the authors is as follows: \
 a.	Move selector S2 to the PROG position to enter Programming Mode, \
-b.	The memory address to be modified is selected with switches S1, \
+b.	Select with the S1 switches the memory address whose content you want to modify, \
 c.	Select with the S3 switches the Data that you want to be written to the memory at the previously set address, \
 d.	Press button S4 to write the new value to memory, \
 e.	Repeat steps b, c and d until all necessary changes have been made, \
 f.	Move selector S2 to the RUN position, to run the program.
 
-In practice, the content of the RAM memory is edited, after which its content is only read by the computer.
+In practice, the content of the RAM memory is edited, after which its content is only read by the Computer.
 
-This computer has no instruction to write data to memory. This is specific to read-only ROMs. So, one ROM can be used for each program.
+This Computer has no instruction to write data to memory. This is specific to read-only ROMs. So, one ROM can be used for each program.
 
-### Block diagram where only active high control signals are used
-In the diagram in figure 2 it can be seen that some of the control signals are active high and some are active low. This is due to the fact that the circuit diagram is optimized for the TTL integrated circuits used by the authors of the original design of the SAP-1 computer.
+### Block Diagram where only active high control signals are used
+In the Diagram in figure 2 it can be seen that some of the control signals are active high and some are active low. This is due to the fact that the circuit diagram is optimized for the TTL integrated circuits used by the authors of the original design of the SAP-1 Computer.
 
 To simplify and ease the Control Block design process, I propose that in this phase of the design we only use active High control signals. This way, the Timing Diagrams in the chapter where we will study the Instruction Set will be easier to understand.
 
