@@ -101,7 +101,7 @@ The LM signal was renamed LAR = Load Address Register \
 The LO signal was renamed I/O = Input/Output Device select
 
 ### Binary Display
-The simplest output device that can be connected to this computer is a Binary Display. This device is used in the original construction of the SAP-1 Computer, where it is integrated directly into the structure of this computer.
+The simplest output device that can be connected to this Computer is a Binary Display. This device is used in the original construction of the SAP-1 Computer, where it is integrated directly into the structure of this Computer.
 
 My version of the Block Diagram is identical to the original, except that I treated the original Output Register as a standalone block that is connected to the system buses as an Input/Output Device.
 
