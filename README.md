@@ -48,7 +48,7 @@ The Block Diagram where only active high control signals are used, can be seen i
 
 ![ Figure 3 ](/Pictures/Figure3.png)
 
-### Identification of computer components
+### Identification of Computer Components
 As we learned in school, a computer can be represented by 3 distinct functional blocks:
 - CPU,
 - Memory
