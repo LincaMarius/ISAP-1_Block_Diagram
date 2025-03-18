@@ -89,9 +89,10 @@ The resulting Block Diagram is shown in the following figure
 
 ![ Figure 6 ](/Pictures/Figure6.png)
 
-Now I have renamed the Memory Address Register as the Address Register
+## ISAP-1 Architecture CPU version 1
+In order to highlight the three system buses, we must invert the positions of the Program Counter and the Memory Address Register in the diagram.
 
-In order to be able to highlight the three buses of the system, we must reverse the positions in the diagram of the Program Counter and the Address Register
+Now I have renamed the Memory Address Register as the Address Register
 
 ![ Figure 7 ](/Pictures/Figure7.png)
 
