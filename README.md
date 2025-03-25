@@ -209,9 +209,11 @@ Following the above changes, the ISAP-1 Computer Address Space is:
 
 Compared to version 1.0 of the ISAP-1 Computer in version 1.2 we have:
 
-| IAP-1 | Program Memory | Data Memory | Input / Output |
-|-------|----------------|-------------|----------------|
-|  1.0  |  16 bytes      |   -        |   1            |
-|  1.2  |  16 bytes      |  16 bytes   |   16           |
+| ISAP-1 version | Program Memory | Data Memory | Input / Output |
+|----------------|----------------|-------------|----------------|
+|  1.0           |  16 bytes      |   -         |   1            |
+|  1.2           |  16 bytes      |  16 bytes   |   16           |
 
+Now the architecture of the ISAP-1 Computer is as follows
 
+![ Figure 20 ](/Pictures/Figure20.png)
