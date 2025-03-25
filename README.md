@@ -183,3 +183,12 @@ From the analysis carried out so far we can draw the following conclusions:
 - jumps in the program cannot be made to perform repetitive tasks because it cannot be written to the Program Counter,
 - the computer does not have a stack, so program subroutines cannot be called,
 - there is no input device that allows manual data entry.
+
+### ISAP-1 Computer Optimization by Adding RAM Writing
+From Figure 7, Figure 15 and Figure 16 it can be seen that the ISAP-1 Computer has the PM signal that commands the reading of data from memory. There is no control signal that allows writing to the memory.
+
+I propose adding a new control signal that I will call R/W (Read/Write) that will control writing either to RAM memory or to an Input-Output port when the I/O control signal is also active.
+
+The ISAP-1 version 1.1 Central Processing Unit is shown in figure 17.
+
+![ Figure 17 ](/Pictures/Figure17.png)
