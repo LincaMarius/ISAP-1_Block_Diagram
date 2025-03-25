@@ -192,3 +192,12 @@ I propose adding a new control signal that I will call R/W (Read/Write) that wil
 The ISAP-1 version 1.1 Central Processing Unit is shown in figure 17.
 
 ![ Figure 17 ](/Pictures/Figure17.png)
+
+Now we will have 13 command signals that must be provided by the Control Block.
+
+From figure 17 we can see that we can select the Program Memory through the PM control signal but we do not have a control signal to select the Data Memory.
+
+I introduced a new control signal that I called DM (Data Memory) which is used to control access to the Data Memory for read or write operations.
+
+Now we will have 14 command signals that must be provided by the Control Block.
+
