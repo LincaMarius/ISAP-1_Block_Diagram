@@ -203,3 +203,7 @@ I introduced a new control signal that I called DM (Data Memory) which is used t
 
 Now we will have 14 command signals that must be provided by the Control Block.
 
+Following the above changes, the ISAP-1 Computer Address Space is:
+
+![ Figure 19 ](/Pictures/Figure19.png)
+
