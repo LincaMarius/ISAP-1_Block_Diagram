@@ -199,5 +199,7 @@ From figure 17 we can see that we can select the Program Memory through the PM c
 
 I introduced a new control signal that I called DM (Data Memory) which is used to control access to the Data Memory for read or write operations.
 
+![ Figure 18 ](/Pictures/Figure18.png)
+
 Now we will have 14 command signals that must be provided by the Control Block.
 
