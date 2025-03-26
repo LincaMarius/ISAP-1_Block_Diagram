@@ -295,3 +295,52 @@ To save the Flags states, the LF (load Flags) control signal is provided. If thi
 
 Now we will have 18 command signals that must be provided by the Control Block.
 
+The presence of Flags allows us to implement conditional jump instructions:
+- JC – Jump if the Carry Flag is set
+- JNC – Jump if the Carry Flag is not set
+- JZ – Jump if the Zero Flag is set
+- JNZ – Jump if the Zero Flag is not set
+- JS – Jump if the Sign Flag is set
+- JNS – Jump if the Sign Flag is not set
+
+Now we can also implement the comparison instruction that will present us through Flags the result of estimating the ratio between two numerical values ​​of interest.
+
+The presence of the CMP instruction allows us to implement other conditional jump instructions:
+- JE – jump if equality (A = B)
+- JNE – jump if not equality (A != B)
+- JG – jump if greater than (A > B)
+- JNG – jump if not greater than (A <= B)
+- JGE – jump if greater than or equal to (A >= B)
+- JNGE – jump if not greater than or equal to (A < B)
+- JL – jump if less than (A < B)
+- JNL – jump if not less than (A >= B)
+- JLE – jump if less than or equal to (A <= B)
+- JNLE – jump if not less than or equal to (A > B)
+
+In total we can implement 17 new instructions that use the state of Flags.
+
+Since the ISAP-1 computer can have a maximum of 16 instructions and we already have 8 instructions in use, it is impossible to implement all of these conditional jump instructions.
+
+I decided to implement only the following 3 conditional jump instructions:
+- JC – Jump if Carry Flag is set
+- JZ – Jump if Zero Flag is set
+- JS – Jump if Sign Flag is set
+
+In addition to these three, I will also include the CMP instruction in the ISAP-1 computer's Instruction Set.
+
+The new Instruction Set is:
+
+| Mnemonic | Opcode | Operation                                                                     |
+|----------|--------|-------------------------------------------------------------------------------|
+| LDA      | 0000   | Load RAM data into Accumulator                                                |
+| ADD      | 0001   | Add RAM data to Accumulator                                                   |
+| SUB      | 0010   | Substract RAM data from Accumulator                                           |
+| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
+| JMP      | 0100   | Unconditional jump to the given address                                       |
+| JC       | 0101   | Jump if Carry Flag is set to the given address                                |
+| JZ       | 0110   | Jump if Zero Flag is set to the given address                                 |
+| JS       | 0111   | Jump if Sign Flag is set to the given address                                 |
+| CMP      | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
+| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
+| OUT      | 1110   | Load Accumulator data into Output device                                      |
+| HLT      | 1111   | Stop processing                                                               |
