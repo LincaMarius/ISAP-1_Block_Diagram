@@ -294,7 +294,7 @@ By using the solution that uses a multiplexer, we have 5 control inputs, so 2 ^ 
 
 To save the Flags states, the LF (load Flags) control signal is provided. If this is active and a rising edge of the clock signal appears, the Flags state presented at the Adder/Subtractor output is loaded into the Flags register.
 
-Now we will have 18 command signals that must be provided by the Control Block.
+Now we will have 19 command signals that must be provided by the Control Block.
 
 The presence of Flags allows us to implement conditional jump instructions:
 - JC – Jump if the Carry Flag is set
@@ -371,3 +371,25 @@ The INT signal is connected to the Flag selection multiplexer and is treated by 
 
 To allow working with input-output devices that do not act on the INT control signal, I have provided two new instructions for enabling and disabling interrupts. For this purpose, a flip-flop is set or reset whose output is ORed with the INT signal.
 
+![ Figure 23 ](/Pictures/Figure23.png)
+
+Now we will have 21 command signals that must be provided by the Control Block.
+
+The new Instruction Set is:
+
+| Mnemonic | Opcode | Operation                                                                     |
+|----------|--------|-------------------------------------------------------------------------------|
+| LDA      | 0000   | Load RAM data into Accumulator                                                |
+| ADD      | 0001   | Add RAM data to Accumulator                                                   |
+| SUB      | 0010   | Substract RAM data from Accumulator                                           |
+| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
+| JMP      | 0100   | Unconditional jump to the given address                                       |
+| JC       | 0101   | Jump if Carry Flag is set to the given address                                |
+| JZ       | 0110   | Jump if Zero Flag is set to the given address                                 |
+| JS       | 0111   | Jump if Sign Flag is set to the given address                                 |
+| CMP      | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
+| EI       | 1001   | Enable interrupts                                                             |
+| DI       | 1010   | Disable interrupts                                                            |
+| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
+| OUT      | 1110   | Load Accumulator data into Output device                                      |
+| HLT      | 1111   | Stop processing                                                               |
