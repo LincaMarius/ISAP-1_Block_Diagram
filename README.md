@@ -177,6 +177,16 @@ The available address space for the SAP-1 computer in this structure is:
 - 16 bytes of Program Memory
 - 1 Output Devices
 
+The original instruction set of the SAP-1 computer is:
+
+| Mnemonic | Opcode | Operation                                  |
+|----------|--------|--------------------------------------------|
+| LDA      | 0000   | Load RAM data into Accumulator             |
+| ADD      | 0001   | Add RAM data to Accumulator                |
+| SUB      | 0010   | Substract RAM data from Accumulator        |
+| OUT      | 1110   | Load Accumulator data into Output Register |
+| HLT      | 1111   | Stop processing                            |
+
 From the analysis carried out so far we can draw the following conclusions:
 - the Size of Programs that can be run is only 16 bytes,
 - the computer cannot retain the values of some variables because it cannot write to Memory,
@@ -217,6 +227,21 @@ Compared to version 1.0 of the ISAP-1 Computer in version 1.2 we have:
 Now the architecture of the ISAP-1 Computer is as follows
 
 ![ Figure 20 ](/Pictures/Figure20.png)
+
+Improvements made at the Block Diagram level allow us to increase the Instruction Set by adding the LDI, STA, IN instructions. Now the OUT instruction can have a parameter to select one of 16 output devices.
+
+The new Instruction Set is:
+
+| Mnemonic | Opcode | Operation                                                                 |
+|----------|--------|---------------------------------------------------------------------------|
+| LDA      | 0000   | Load RAM data into Accumulator                                            |
+| ADD      | 0001   | Add RAM data to Accumulator                                               |
+| SUB      | 0010   | Substract RAM data from Accumulator                                       |
+| OUT      | 1110   | Load Accumulator data into Output device                                  |
+| HLT      | 1111   | Stop processing                                                           |
+| LDI      | 0011   | Load immediate value into Accumulator                                     |
+| STA      | 0100   | Stores the numeric value from the Accumulator at the given memory address |
+| IN       | 0101   | Loads the numeric value given by an input port into the Accumulator       |
 
 ## Improved design by adding possibility for Program Counter to be preset
 From the Block Diagram of the Central Processing Unit in Figure 18, it can be seen that the Program Counter cannot be loaded with a desired value, thus we do not have the possibility of making conditional or unconditional jumps in the execution of the programs being run.
