@@ -275,8 +275,9 @@ The block diagram of the computer that has the Flags register added is as follow
 
 ![ Figure 22 ](/Pictures/Figure22.png)
 
-I added the following control signal:
+I added the following control signals:
 - LF – Load Flags – load the Flags register with the value of the Flags signals present at the output of the Adder/Subtractor or Arithmetic and Logic Units
+- EF – Enable Flags – presents the contents of the Flags register on the Data Bus
 
 I have provided 3 Flags for the ISAP-1 computer:
 - The Carry Flag – is set if the 8-bit representation capacity of the result of an arithmetic operation is exceeded,
@@ -344,3 +345,29 @@ The new Instruction Set is:
 | IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
 | OUT      | 1110   | Load Accumulator data into Output device                                      |
 | HLT      | 1111   | Stop processing                                                               |
+
+## Improving the system design by adding the Interrupt System
+Since we have an Input-Output subsystem, it is necessary to determine the state of an input-output device to know if it can transmit or receive data.
+
+For this purpose, the interruption mechanism or the pooling method can be used.
+
+The interrupt system requires dedicated hardware for this purpose. When an event occurs, the running program is interrupted and a routine is called that handles the interruption, from which the original program is returned.
+
+This system requires the presence of the stack because subroutines are called.
+
+The pooling method consists of querying each input/output device regarding its availability to transmit or receive data. This query must be done cyclically by the main program.
+
+Usually, a register of the input-output device is read where a bit called READY is tested.
+
+The presence of this Status Register for each input-output device in addition to the data one will halve the number of such devices that can be used in the ISAP-1 computer from 16 to a maximum of 8 and complicates the implementation of these devices.
+
+I decided to implement this mechanism differently by introducing a control signal called INT. This is an input signal for the CPU.
+
+Any input-output device can connect to this signal. It is of the open-collector or open-drain type.
+
+Any input-output device can activate the INT signal only if it is accessed by the presence on the address bus of the address established for it.
+
+The INT signal is connected to the Flag selection multiplexer and is treated by the CPU as a Flag.
+
+To allow working with input-output devices that do not act on the INT control signal, I have provided two new instructions for enabling and disabling interrupts. For this purpose, a flip-flop is set or reset whose output is ORed with the INT signal.
+
