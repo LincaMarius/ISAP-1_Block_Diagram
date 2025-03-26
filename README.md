@@ -226,3 +226,6 @@ For this purpose, I modified the Program Counter so that it can be loaded with a
 ISAP-1 architecture CPU with loadable Program Counter:
 
 ![ Figure 21 ](/Pictures/Figure21.png)
+
+The ability to load numerical values ​​into the Program Counter allows us to extend the Instruction Set of the ISAP-1 Computer by implementing the unconditional jump instruction.
+
