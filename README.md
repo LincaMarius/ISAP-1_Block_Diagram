@@ -228,7 +228,7 @@ Now the architecture of the ISAP-1 Computer is as follows
 
 ![ Figure 20 ](/Pictures/Figure20.png)
 
-Improvements made at the Block Diagram level allow us to increase the Instruction Set by adding the LDI, STA, IN instructions. Now the OUT instruction can have a parameter to select one of 16 output devices.
+Improvements made at the Block Diagram level allow us to increase the Instruction Set by adding the STA and IN instructions. Now the OUT instruction can have a parameter to select one of 16 output devices.
 
 The new Instruction Set is:
 
@@ -237,11 +237,10 @@ The new Instruction Set is:
 | LDA      | 0000   | Load RAM data into Accumulator                                            |
 | ADD      | 0001   | Add RAM data to Accumulator                                               |
 | SUB      | 0010   | Substract RAM data from Accumulator                                       |
+| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address |
+| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator       |
 | OUT      | 1110   | Load Accumulator data into Output device                                  |
 | HLT      | 1111   | Stop processing                                                           |
-| LDI      | 0011   | Load immediate value into Accumulator                                     |
-| STA      | 0100   | Stores the numeric value from the Accumulator at the given memory address |
-| IN       | 0101   | Loads the numeric value given by an input port into the Accumulator       |
 
 ## Improved design by adding possibility for Program Counter to be preset
 From the Block Diagram of the Central Processing Unit in Figure 18, it can be seen that the Program Counter cannot be loaded with a desired value, thus we do not have the possibility of making conditional or unconditional jumps in the execution of the programs being run.
@@ -254,3 +253,24 @@ ISAP-1 architecture CPU with loadable Program Counter:
 
 The ability to load numerical values ​​into the Program Counter allows us to extend the Instruction Set of the ISAP-1 Computer by implementing the unconditional jump instruction.
 
+The new Instruction Set is:
+
+| Mnemonic | Opcode | Operation                                                                 |
+|----------|--------|---------------------------------------------------------------------------|
+| LDA      | 0000   | Load RAM data into Accumulator                                            |
+| ADD      | 0001   | Add RAM data to Accumulator                                               |
+| SUB      | 0010   | Substract RAM data from Accumulator                                       |
+| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address |
+| JMP      | 0100   | Unconditional jump to the given address                                   |
+| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator       |
+| OUT      | 1110   | Load Accumulator data into Output device                                  |
+| HLT      | 1111   | Stop processing                                                           |
+
+## Improving system design by adding Flags
+To run more advanced programs that require conditional jumps, we need to use Flags that provide us with particularities of the result of the last arithmetic or logical operation performed. These characteristics of the result can be determined by evaluating the values ​​of the Flags.
+
+These Flags can be tested individually or in groups. For the ISAP-1 Computer I will use a Flag selector, so only one condition is tested at a time.
+
+The block diagram of the computer that has the Flags register added is as follows:
+
+![ Figure 22 ](/Pictures/Figure22.png)
