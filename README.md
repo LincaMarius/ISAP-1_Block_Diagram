@@ -423,11 +423,6 @@ Compared to version 1.2 of the ISAP-1 Computer in version 1.6 we have:
 |  1.2           |  16 bytes      |  16 bytes   |   -        |     16         |
 |  1.6           |  16 bytes      |  16 bytes   |  16 bytes  |     16         |
 
-Now the architecture of the ISAP-1 Computer is as follows
-
-
-
-
 New instructions such as: PUSH, POP, CALL, RET, JMP FAR can now be implemented.
 
 The new Instruction Set is:
