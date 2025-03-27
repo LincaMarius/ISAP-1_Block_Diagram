@@ -474,3 +474,5 @@ The ISAP-1 computer will have an Instruction Set consisting of 31 instructions: 
 
 To modify the optimal control signals if we have to execute an extended instruction the Control Block must receive all 8 bits stored in the Instruction Register. This causes the block diagram of the Central Processing Unit of the ISAP-1 computer to be modified as follows:
 
+![ Figure 26 ](/Pictures/Figure26.png)
+
