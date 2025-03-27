@@ -393,3 +393,14 @@ The new Instruction Set is:
 | IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
 | OUT      | 1110   | Load Accumulator data into Output device                                      |
 | HLT      | 1111   | Stop processing                                                               |
+
+## Improved system design by adding Stack
+I decided to add operations with the stack of this computer. This way I can implement subroutine calling as the first benefit. The stack also provides the ability to store data temporarily.
+
+I will use a 4-bit register for the stack, since the address is 4 bits. This register must be incrementable as well as decrementable.
+
+For this purpose we can use a counter. It must be able to be incremented but also decremented.
+
+The Block Diagram of the system that has implemented the Stack Pointer is shown in the following figure.
+
+
