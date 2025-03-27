@@ -548,3 +548,7 @@ Following the above changes, the ISAP-1 Computer Address Space is:
 
 ![ Figure 28 ](/Pictures/Figure28.png)
 
+Now the architecture of the ISAP-1 Computer is as follows
+
+![ Figure 29 ](/Pictures/Figure29.png)
+
