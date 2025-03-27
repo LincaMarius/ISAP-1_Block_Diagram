@@ -407,6 +407,16 @@ The Block Diagram of the system that has implemented the Stack Pointer is shown 
 
 Now we will have 25 command signals that must be provided by the Control Block.
 
+Since the available RAM is only 16 bytes, I decided to have the Stack use a separate address space, so it doesn't reduce the space available for program variables.
+
+Because the Stack does not use the computer's data RAM, but has its own RAM, the direction of growth of the Stack does not matter.
+
+Following the above changes, the ISAP-1 Computer Address Space is:
+
+
+
+
+
 New instructions such as: PUSH, POP, CALL, RET, JMP FAR can now be implemented.
 
 The new Instruction Set is:
@@ -432,4 +442,29 @@ The new Instruction Set is:
 | IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
 | OUT      | 1110   | Load Accumulator data into Output device                                      |
 | HLT      | 1111   | Stop processing                                                               |
+
+## Extending the Instruction Set
+The original format of the SAP-1 computer instructions is:
+
+| 4 bits instruction code   | 4 bits operand (memory address)          |
+|---------------------------|------------------------------------------|
+
+This implies that a maximum of 2^4 = 16 instructions can be implemented.
+
+From the table above we can see that we need to implement 19 instructions but we only have 16 possible encodings.
+
+Thus the CALL, RET and JMPF instructions cannot be implemented
+
+Since there are instructions that have parameters and instructions that do not require parameters, I will group the instructions without parameters into a separate set of instructions.
+
+This instruction set will have a prefix. I chose the value 1111 binary, 0xF in hexadecimal for this prefix.
+
+| Extended instruction prefix 4 bits (0xF) | Extended instruction 4 bits (0xF)        |
+|------------------------------------------|------------------------------------------|
+
+This will leave us with 15 instructions that have parameters and we will be able to implement 16 instructions that do not have parameters.
+
+The ISAP-1 computer will have an Instruction Set consisting of 31 instructions: 15 instructions with parameters and 16 instructions without parameters.
+
+To modify the optimal control signals if we have to execute an extended instruction the Control Block must receive all 8 bits stored in the Instruction Register. This causes the block diagram of the Central Processing Unit of the ISAP-1 computer to be modified as follows:
 
