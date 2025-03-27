@@ -403,4 +403,6 @@ For this purpose we can use a counter. It must be able to be incremented but als
 
 The Block Diagram of the system that has implemented the Stack Pointer is shown in the following figure.
 
+![ Figure 24 ](/Pictures/Figure24.png)
 
+Now we will have 25 command signals that must be provided by the Control Block.
