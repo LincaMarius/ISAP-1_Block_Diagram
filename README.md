@@ -406,3 +406,30 @@ The Block Diagram of the system that has implemented the Stack Pointer is shown 
 ![ Figure 24 ](/Pictures/Figure24.png)
 
 Now we will have 25 command signals that must be provided by the Control Block.
+
+New instructions such as: PUSH, POP, CALL, RET, JMP FAR can now be implemented.
+
+The new Instruction Set is:
+
+| Mnemonic | Opcode | Operation                                                                     |
+|----------|--------|-------------------------------------------------------------------------------|
+| LDA      | 0000   | Load RAM data into Accumulator                                                |
+| ADD      | 0001   | Add RAM data to Accumulator                                                   |
+| SUB      | 0010   | Substract RAM data from Accumulator                                           |
+| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
+| JMP      | 0100   | Unconditional jump to the given address                                       |
+| JC       | 0101   | Jump if Carry Flag is set to the given address                                |
+| JZ       | 0110   | Jump if Zero Flag is set to the given address                                 |
+| JS       | 0111   | Jump if Sign Flag is set to the given address                                 |
+| CMP      | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
+| EI       | 1001   | Enable interrupts                                                             |
+| DI       | 1010   | Disable interrupts                                                            |
+| PUSH     | 1011   | Pushes the value stored in Accumulator onto the Stack                         |
+| POP      | 1100   | Pop the value stored on the Stack into the Accumulator                        |
+| CALL     | ????   | Subroutine call                                                               |
+| RET      | ????   | Return from subroutine                                                        |
+| JMPF     | ????   | Unconditional far jump                                                        |
+| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
+| OUT      | 1110   | Load Accumulator data into Output device                                      |
+| HLT      | 1111   | Stop processing                                                               |
+
