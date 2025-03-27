@@ -544,3 +544,7 @@ Control of each type of memory is done by using an external decoder
 
 Now we will have 23 command signals that must be provided by the Control Block compared to 25 in the previous version.
 
+Following the above changes, the ISAP-1 Computer Address Space is:
+
+![ Figure 28 ](/Pictures/Figure28.png)
+
