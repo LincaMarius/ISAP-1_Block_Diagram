@@ -515,3 +515,27 @@ The new Extended Instruction Set of the ISAP-1 computer is:
 | EI       | 1101   | Enable interrupts                                                             |
 | DI       | 1110   | Disable interrupts                                                            |
 | HLT      | 1111   | Stop processing                                                               |
+
+## Improving system design by reducing the number of control signals
+As can be seen from Figure 26, 5 control signals are used for reading and writing data from memory and input-output ports in version 1.7 of the ISAP-1 Central Processing Unit.
+
+These are: PM, R/W, DM, I/O, SM. With their help we can access: Program Memory, Data Memory, Stack and Input-Output Ports.
+
+I propose grouping these signals so that we can control the 4 address spaces with only 2 control signals by using binary encoding. I have called these control signals CS0 (Chip Select 0) and CS1 (Chip Select 1).
+
+Since Program Memory is read-only I propose to also use write access to this address space and use it to implement a display memory. So I can read code from Program Memory and write data to Display Memory.
+
+The binary encoding of the Memory addressing mode is presented in the following table.
+
+| CS0 | CS1 | R/W | Operation                |
+|-----|-----|-----|--------------------------|
+|  0  |  0  |  0  | read from Program Memory |
+|  0  |  0  |  1  | write to Display Memory  |
+|  0  |  1  |  0  | read from Data Memory    |
+|  0  |  1  |  1  | write to Data Memory     |
+|  1  |  0  |  0  | read from Stack Memory   |
+|  1  |  0  |  1  | write to Stack Memory    |
+|  1  |  1  |  0  | read from I/O Port       |
+|  1  |  1  |  1  | write to I/O Port        |
+
+Control of each type of memory is done by using an external decoder
