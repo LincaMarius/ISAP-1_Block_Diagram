@@ -413,6 +413,17 @@ Because the Stack does not use the computer's data RAM, but has its own RAM, the
 
 Following the above changes, the ISAP-1 Computer Address Space is:
 
+![ Figure 25 ](/Pictures/Figure25.png)
+
+Compared to version 1.2 of the ISAP-1 Computer in version 1.6 we have:
+
+| ISAP-1 version | Program Memory | Data Memory | Stack      | Input / Output |
+|----------------|----------------|-------------|------------|----------------|
+|  1.0           |  16 bytes      |   -         |   -        |     1          |
+|  1.2           |  16 bytes      |  16 bytes   |   -        |     16         |
+|  1.6           |  16 bytes      |  16 bytes   |  16 bytes  |     16         |
+
+Now the architecture of the ISAP-1 Computer is as follows
 
 
 
