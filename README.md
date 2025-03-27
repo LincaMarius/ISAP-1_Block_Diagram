@@ -567,3 +567,36 @@ The block diagram of the Central Processing Unit which has the Accumulator regis
 The LA control signal is replaced by two new control signals
 - LAL – load register Accumulator Lower Nibble
 - LAH – load register Accumulator Upper Nibble.
+
+The new Instruction Set of the ISAP-1 computer is:
+
+| Mnemonic | Opcode | Operation                                                                     |
+|----------|--------|-------------------------------------------------------------------------------|
+| LDA n    | 0000   | Load RAM data into Accumulator                                                |
+| ADD n    | 0001   | Add RAM data to Accumulator                                                   |
+| SUB n    | 0010   | Substract RAM data from Accumulator                                           |
+| STA n    | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
+| JMP n    | 0100   | Unconditional jump to the given address                                       |
+| JC n     | 0101   | Jump if Carry Flag is set to the given address                                |
+| JZ n     | 0110   | Jump if Zero Flag is set to the given address                                 |
+| JS n     | 0111   | Jump if Sign Flag is set to the given address                                 |
+| CMP n    | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
+| CALL n   | 1001   | Subroutine call                                                               |
+| JMPF n   | 1010   | Unconditional far jump                                                        |
+| LAL n    | 1011   | Load immediate value into the lower Nibble of the Accumulator                 |
+| LAH      | 1100   | Load immediate value into the upper Nibble of the Accumulator                 |
+| IN n     | 1101   | Loads the numeric value given by an input port into the Accumulator           |
+| OUT n    | 1110   | Load Accumulator data into Output device                                      |
+| EXTENDED | 1111   | Prefix for instructions without parameters                                    |
+
+The Extended Instruction Set of the ISAP-1 computer is:
+
+| Mnemonic | Opcode | Operation                                                                     |
+|----------|--------|-------------------------------------------------------------------------------|
+| PUSH     | 0000   | Pushes the value stored in Accumulator onto the Stack                         |
+| POP      | 0001   | Pop the value stored on the Stack into the Accumulator                        |
+| RET      | 0010   | Return from subroutine                                                        |
+| EI       | 1101   | Enable interrupts                                                             |
+| DI       | 1110   | Disable interrupts                                                            |
+| HLT      | 1111   | Stop processing                                                               |
+
