@@ -552,3 +552,18 @@ Now the architecture of the ISAP-1 Computer is as follows
 
 ![ Figure 29 ](/Pictures/Figure29.png)
 
+## Improved system design by loading the lower Nibble and upper Nibble of the Accumulator register separately
+If we want to load an immediate numerical value into the Accumulator, due to the format of the ISAP-1 Computer instruction we find that it can have values ​​between 0000 binary and 1111 binary, which corresponds to a minimum value of 0 and a maximum value of 15.
+
+To run programs that allow immediate values to be loaded into the 8-bit Accumulator Register, since the Load Accumulator Immediate (LAI) instruction allows 4-bit values equivalent to a nibble, I decided to implement two separate instructions.
+
+- LIL Instruction – Load immediate value into the lower Nibble of the Accumulator
+- LIH Instruction - Load immediate value into the upper Nibble of the Accumulator
+
+The block diagram of the Central Processing Unit which has the Accumulator register with separate charging signals for each nibble is shown in the following figure
+
+![ Figure 30 ](/Pictures/Figure30.png)
+
+The LA control signal is replaced by two new control signals
+- LAL – load register Accumulator Lower Nibble
+- LAH – load register Accumulator Upper Nibble.
