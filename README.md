@@ -265,22 +265,22 @@ The new Instruction Set is:
 
 | Mnemonic | Opcode | Operation                                                                 |
 |----------|--------|---------------------------------------------------------------------------|
-| LDA      | 0000   | Load RAM data into Accumulator                                            |
-| ADD      | 0001   | Add RAM data to Accumulator                                               |
-| SUB      | 0010   | Substract RAM data from Accumulator                                       |
-| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address |
-| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator       |
-| OUT      | 1110   | Load Accumulator data into Output device                                  |
+| LDA n    | 0000   | Load RAM data into Accumulator                                            |
+| ADD n    | 0001   | Add RAM data to Accumulator                                               |
+| SUB n    | 0010   | Substract RAM data from Accumulator                                       |
+| STA n    | 0011   | Stores the numeric value from the Accumulator at the given memory address |
+| IN n     | 1101   | Loads the numeric value given by an input port into the Accumulator       |
+| OUT n    | 1110   | Load Accumulator data into Output device                                  |
 | HLT      | 1111   | Stop processing                                                           |
 
 ## Improved design by adding possibility for Program Counter to be preset
-From the Block Diagram of the Central Processing Unit in Figure 18, it can be seen that the Program Counter cannot be loaded with a desired value, thus we do not have the possibility of making conditional or unconditional jumps in the execution of the programs being run.
+From the Block Diagram of the Central Processing Unit in Figure 20, it can be seen that the Program Counter cannot be loaded with a desired value, thus we do not have the possibility of making conditional or unconditional jumps in the execution of the programs being run.
 
 For this purpose, I modified the Program Counter so that it can be loaded with any value present on the W bus, if the new LP control signal is active and a positive edge of the clock signal appears.
 
 ISAP-1 architecture CPU with loadable Program Counter:
 
-![ Figure 21 ](/Pictures/Figure21.png)
+![ Figure 23 ](/Pictures/Figure23.png)
 
 The ability to load numerical values ​​into the Program Counter allows us to extend the Instruction Set of the ISAP-1 Computer by implementing the unconditional jump instruction.
 
