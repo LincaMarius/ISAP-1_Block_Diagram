@@ -143,7 +143,7 @@ The output device consists of a register where 8 bits are written when the I/O c
 ### Memory Subsystem
 Figure 9 shows the Memory block of the SAP-1 computer.
 
-![ Figure 9 ](/Pictures/Figure9.png)
+![ Figure 11 ](/Pictures/Figure11.png)
 
 The Memory has two operating modes, dictated by the position of switch S2.
 
