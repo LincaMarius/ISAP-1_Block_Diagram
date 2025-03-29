@@ -511,11 +511,11 @@ Compared to version 1.6 of the ISAP-1 Computer in version 1.7 we have:
 
 | ISAP-1 version | Program Memory | Data Memory | Stack      | Input / Output | Nr. of instructions |
 |----------------|----------------|-------------|------------|----------------|---------------------|
-|  1.0           |  16 bytes      |   -         |   -        |     1          |     5               |
-|  1.2           |  16 bytes      |  16 bytes   |   -        |     16         |     7               |
-|  1.5           |  16 bytes      |  16 bytes   |   -        |     16         |     14              |
-|  1.6           |  16 bytes      |  16 bytes   |  16 bytes  |     16         |     16              |
-|  1.7           |  16 bytes      |  16 bytes   |  16 bytes  |     16         |     19              |
+|  1.0           |  16 bytes      |   -         |   -        |   1 Device     |     5               |
+|  1.2           |  16 bytes      |  16 bytes   |   -        |   16 Devices   |     7               |
+|  1.5           |  16 bytes      |  16 bytes   |   -        |   16 Devices   |     14              |
+|  1.6           |  16 bytes      |  16 bytes   |  16 bytes  |   16 Devices   |     16              |
+|  1.7           |  16 bytes      |  16 bytes   |  16 bytes  |   16 Devices   |     19              |
 
 The new Instruction Set of the ISAP-1 computer is:
 
@@ -547,8 +547,15 @@ The new Extended Instruction Set of the ISAP-1 computer is:
 | DI       | 1110   | Disable interrupts                                                            |
 | HLT      | 1111   | Stop processing                                                               |
 
+### Control Unit structure for CPU version 1.7
+Following the expansion of the Instruction Set, I also need to modify the ISAP-1 Computer Control Unit to correctly interpret the new Instruction Set and correctly generate all Control signals.
+
+The instruction decoder now no longer decodes each instruction individually, but only identifies if we have the Extended Instruction Set prefix 0Fh and activates the “EXT” signal. The instruction code is transmitted to the Control Matrix in 4-bit binary form to reduce the number of logic gates required.
+
+![ Figure 29 ](/Pictures/Figure29.png)
+
 ## Improving system design by reducing the number of control signals
-As can be seen from Figure 26, 5 control signals are used for reading and writing data from memory and input-output ports in version 1.7 of the ISAP-1 Central Processing Unit.
+As can be seen from Figure 28, 5 control signals are used for reading and writing data from memory and input-output ports in version 1.7 of the ISAP-1 Central Processing Unit.
 
 These are: PM, R/W, DM, I/O, SM. With their help we can access: Program Memory, Data Memory, Stack and Input-Output Ports.
 
