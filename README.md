@@ -588,7 +588,7 @@ Following the above changes, the ISAP-1 Computer Address Space is:
 
 Now the architecture of the ISAP-1 Computer is as follows
 
-![ Figure 29 ](/Pictures/Figure29.png)
+![ Figure 32 ](/Pictures/Figure32.png)
 
 ## Improved system design by loading the lower Nibble and upper Nibble of the Accumulator register separately
 If we want to load an immediate numerical value into the Accumulator, due to the format of the ISAP-1 Computer instruction we find that it can have values ​​between 0000 binary and 1111 binary, which corresponds to a minimum value of 0 and a maximum value of 15.
