@@ -177,7 +177,7 @@ From this Diagram the Multiplexer can be ignored and we can obtain a simpler and
 
 Since no Data is read from the Bus, so no Data is transferred to the Bus, this can also be ignored.
 
-![ Figure 14 ](/Pictures/Figure14.png)
+![ Figure 16 ](/Pictures/Figure16.png)
 
 We can conclude that in programming mode the Memory is functionally separate from the SAP-1 computer.
 
