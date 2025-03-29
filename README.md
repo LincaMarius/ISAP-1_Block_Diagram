@@ -250,14 +250,14 @@ Following the above changes, the ISAP-1 Computer Address Space is:
 
 Compared to version 1.0 of the ISAP-1 Computer in version 1.2 we have:
 
-| ISAP-1 version | Program Memory | Data Memory | Input / Output |
-|----------------|----------------|-------------|----------------|
-|  1.0           |  16 bytes      |   -         |   1            |
-|  1.2           |  16 bytes      |  16 bytes   |   16           |
+| ISAP-1 version | Program Memory | Data Memory | Stack      | Input / Output | Nr. of instructions |
+|----------------|----------------|-------------|------------|----------------|---------------------|
+|  1.0           |  16 bytes      |      -      |      -     |   1 Device     |          5          |
+|  1.2           |  16 bytes      |  16 bytes   |      -     |   16 Devices   |          7          |
 
 Now the architecture of the ISAP-1 Computer is as follows
 
-![ Figure 20 ](/Pictures/Figure20.png)
+![ Figure 22 ](/Pictures/Figure22.png)
 
 Improvements made at the Block Diagram level allow us to increase the Instruction Set by adding the STA and IN instructions. Now the OUT instruction can have a parameter to select one of 16 output devices.
 
