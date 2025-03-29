@@ -192,7 +192,7 @@ We can see an increased complexity of the Memory Subsystem imposed by the need t
 ### SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
 
-![ Figure 16 ](/Pictures/Figure16.png)
+![ Figure 18 ](/Pictures/Figure18.png)
 
 We can distinguish the three subsystems of the computer:
 - The SAP-1 CPU
