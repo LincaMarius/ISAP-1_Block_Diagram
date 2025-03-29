@@ -102,6 +102,22 @@ The CE signal was renamed PM = Program Memory select \
 The LM signal was renamed LAR = Load Address Register \
 The LO signal was renamed I/O = Input/Output Device select
 
+### Control Unit structure
+The SAP-1 computer has a Control Unit made using TTL logic gates.
+
+The Control Unit is built from three blocks:
+- Instruction Decoder,
+- Step Counter,
+- Control Matrix.
+
+![ Figure 8 ](/Pictures/Figure8.png)
+
+The instruction decoder has the structure of a classic decoder and activates a single output depending on the instruction code presented at the input. The number of active outputs is equal to the number of instructions present in the Instruction Set.
+
+The SAP-1 computer is based on micro-step control. For this purpose, a Step Counter block is required. The authors of the SAP-1 computer used a Ring Counter to implement the Step Counter.
+
+The control matrix has the role of generating control signals depending on the instruction that is executed in accordance with the current micro-step.
+
 ### Binary Display
 The simplest output device that can be connected to this Computer is a Binary Display. This device is used in the original construction of the SAP-1 Computer, where it is integrated directly into the structure of this Computer.
 
