@@ -27,6 +27,8 @@ I studied the original schematic of the SAP-1 Computer and recreated the Block D
 
 ![ Figure 2 ](/Pictures/Figure2.png)
 
+The HLT control signal was omitted in the original Block Diagram.
+
 The programming mode of the SAP-1 Computer described by the authors is as follows: \
 a.	Move selector S2 to the PROG position to enter Programming Mode, \
 b.	Select with the S1 switches the memory address whose content you want to modify, \
