@@ -598,9 +598,9 @@ To run programs that allow immediate values to be loaded into the 8-bit Accumula
 - LIL Instruction – Load immediate value into the lower Nibble of the Accumulator
 - LIH Instruction - Load immediate value into the upper Nibble of the Accumulator
 
-The block diagram of the Central Processing Unit which has the Accumulator register with separate charging signals for each nibble is shown in the following figure
+The block diagram of the Central Processing Unit which has the Accumulator register with separate loading signals for each nibble is shown in the following figure
 
-![ Figure 30 ](/Pictures/Figure30.png)
+![ Figure 33 ](/Pictures/Figure33.png)
 
 The LA control signal is replaced by two new control signals
 - LAL – load register Accumulator Lower Nibble
