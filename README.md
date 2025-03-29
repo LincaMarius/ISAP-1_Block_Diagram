@@ -173,7 +173,7 @@ The Block Diagram of the Memory Block in Programming Mode is as follows
 
 From this Diagram the Multiplexer can be ignored and we can obtain a simpler and easier to understand Diagram.
 
-![ Figure 13 ](/Pictures/Figure13.png)
+![ Figure 15 ](/Pictures/Figure15.png)
 
 Since no Data is read from the Bus, so no Data is transferred to the Bus, this can also be ignored.
 
