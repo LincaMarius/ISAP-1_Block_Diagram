@@ -240,9 +240,9 @@ From figure 19 we can see that we can select the Program Memory through the PM c
 
 I introduced a new control signal that I called DM (Data Memory) which is used to control access to the Data Memory for read or write operations.
 
-![ Figure 18 ](/Pictures/Figure18.png)
+![ Figure 20 ](/Pictures/Figure20.png)
 
-Now we will have 14 command signals that must be provided by the Control Block.
+Now we will have 15 command signals that must be provided by the Control Block.
 
 Following the above changes, the ISAP-1 Computer Address Space is:
 
