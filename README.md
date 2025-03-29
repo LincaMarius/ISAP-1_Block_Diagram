@@ -443,7 +443,7 @@ Because the Stack does not use the computer's data RAM, but has its own RAM, the
 
 Following the above changes, the ISAP-1 Computer Address Space is:
 
-![ Figure 25 ](/Pictures/Figure25.png)
+![ Figure 27 ](/Pictures/Figure27.png)
 
 Compared to version 1.2 of the ISAP-1 Computer in version 1.6 we have:
 
