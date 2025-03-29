@@ -226,17 +226,17 @@ From the analysis carried out so far we can draw the following conclusions:
 - there is no input device that allows manual data entry.
 
 ### ISAP-1 Computer Optimization by Adding RAM Writing
-From Figure 7, Figure 15 and Figure 16 it can be seen that the ISAP-1 Computer has the PM signal that commands the reading of data from memory. There is no control signal that allows writing to the memory.
+From Figure 7, Figure 17 and Figure 18 it can be seen that the ISAP-1 Computer has the PM signal that commands the reading of data from memory. There is no control signal that allows writing to the memory.
 
 I propose adding a new control signal that I will call R/W (Read/Write) that will control writing either to RAM memory or to an Input-Output port when the I/O control signal is also active.
 
-The ISAP-1 version 1.1 Central Processing Unit is shown in figure 17.
+The ISAP-1 version 1.1 Central Processing Unit is shown in figure 19.
 
-![ Figure 17 ](/Pictures/Figure17.png)
+![ Figure 19 ](/Pictures/Figure19.png)
 
-Now we will have 13 command signals that must be provided by the Control Block.
+Now we will have 14 command signals that must be provided by the Control Block.
 
-From figure 17 we can see that we can select the Program Memory through the PM control signal but we do not have a control signal to select the Data Memory.
+From figure 19 we can see that we can select the Program Memory through the PM control signal but we do not have a control signal to select the Data Memory.
 
 I introduced a new control signal that I called DM (Data Memory) which is used to control access to the Data Memory for read or write operations.
 
