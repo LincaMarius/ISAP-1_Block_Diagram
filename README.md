@@ -401,9 +401,9 @@ The INT signal is connected to the Flag selection multiplexer and is treated by 
 
 To allow working with input-output devices that do not act on the INT control signal, I have provided two new instructions for enabling and disabling interrupts. For this purpose, a flip-flop is set or reset whose output is ORed with the INT signal.
 
-![ Figure 23 ](/Pictures/Figure23.png)
+![ Figure 25 ](/Pictures/Figure25.png)
 
-Now we will have 21 command signals that must be provided by the Control Block.
+Now we will have 21 control signals that must be provided by the Control Block.
 
 The new Instruction Set is:
 
