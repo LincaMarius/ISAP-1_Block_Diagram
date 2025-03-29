@@ -185,7 +185,7 @@ So, functionally speaking, the Memory is simply a ROM for the SAP-1 computer.
 
 We can synthesize a Block Diagram for the Memory Subsystem of the SAP-1 and ISAP-1 computers
 
-![ Figure 15 ](/Pictures/Figure15.png)
+![ Figure 17 ](/Pictures/Figure17.png)
 
 We can see an increased complexity of the Memory Subsystem imposed by the need to modify the contents of the Memory using the Control Panel switches.
 
