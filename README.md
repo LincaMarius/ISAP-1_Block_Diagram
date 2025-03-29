@@ -447,11 +447,12 @@ Following the above changes, the ISAP-1 Computer Address Space is:
 
 Compared to version 1.2 of the ISAP-1 Computer in version 1.6 we have:
 
-| ISAP-1 version | Program Memory | Data Memory | Stack      | Input / Output |
-|----------------|----------------|-------------|------------|----------------|
-|  1.0           |  16 bytes      |   -         |   -        |     1          |
-|  1.2           |  16 bytes      |  16 bytes   |   -        |     16         |
-|  1.6           |  16 bytes      |  16 bytes   |  16 bytes  |     16         |
+| ISAP-1 version | Program Memory | Data Memory | Stack      | Input / Output | Nr. of instructions |
+|----------------|----------------|-------------|------------|----------------|---------------------|
+|  1.0           |  16 bytes      |      -      |      -     |   1 Device     |          5          |
+|  1.2           |  16 bytes      |  16 bytes   |      -     |   16 Devices   |          7          |
+|  1.5           |  16 bytes      |  16 bytes   |      -     |   16 Devices   |          14         |
+|  1.6           |  16 bytes      |  16 bytes   |  16 bytes  |   16 Devices   |          16         |
 
 New instructions such as: PUSH, POP, CALL, RET, JMP FAR can now be implemented.
 
@@ -459,24 +460,24 @@ The new Instruction Set is:
 
 | Mnemonic | Opcode | Operation                                                                     |
 |----------|--------|-------------------------------------------------------------------------------|
-| LDA      | 0000   | Load RAM data into Accumulator                                                |
-| ADD      | 0001   | Add RAM data to Accumulator                                                   |
-| SUB      | 0010   | Substract RAM data from Accumulator                                           |
-| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
-| JMP      | 0100   | Unconditional jump to the given address                                       |
-| JC       | 0101   | Jump if Carry Flag is set to the given address                                |
-| JZ       | 0110   | Jump if Zero Flag is set to the given address                                 |
-| JS       | 0111   | Jump if Sign Flag is set to the given address                                 |
-| CMP      | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
+| LDA n    | 0000   | Load RAM data into Accumulator                                                |
+| ADD n    | 0001   | Add RAM data to Accumulator                                                   |
+| SUB n    | 0010   | Substract RAM data from Accumulator                                           |
+| STA n    | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
+| JMP n    | 0100   | Unconditional jump to the given address                                       |
+| JC n     | 0101   | Jump if Carry Flag is set to the given address                                |
+| JZ n     | 0110   | Jump if Zero Flag is set to the given address                                 |
+| JS n     | 0111   | Jump if Sign Flag is set to the given address                                 |
+| CMP n    | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
 | EI       | 1001   | Enable interrupts                                                             |
 | DI       | 1010   | Disable interrupts                                                            |
 | PUSH     | 1011   | Pushes the value stored in Accumulator onto the Stack                         |
 | POP      | 1100   | Pop the value stored on the Stack into the Accumulator                        |
-| CALL     | ????   | Subroutine call                                                               |
+| CALL n   | ????   | Subroutine call                                                               |
 | RET      | ????   | Return from subroutine                                                        |
-| JMPF     | ????   | Unconditional far jump                                                        |
-| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
-| OUT      | 1110   | Load Accumulator data into Output device                                      |
+| JMPF n   | ????   | Unconditional far jump                                                        |
+| IN n     | 1101   | Loads the numeric value given by an input port into the Accumulator           |
+| OUT n    | 1110   | Load Accumulator data into Output device                                      |
 | HLT      | 1111   | Stop processing                                                               |
 
 ## Extending the Instruction Set
@@ -495,8 +496,8 @@ Since there are instructions that have parameters and instructions that do not r
 
 This instruction set will have a prefix. I chose the value 1111 binary, 0xF in hexadecimal for this prefix.
 
-| Extended instruction prefix 4 bits (0xF) | Extended instruction 4 bits (0xF)        |
-|------------------------------------------|------------------------------------------|
+| Extended instruction prefix 4 bits (0xF) | Extended instruction 4 bits        |
+|------------------------------------------|------------------------------------|
 
 This will leave us with 15 instructions that have parameters and we will be able to implement 16 instructions that do not have parameters.
 
@@ -504,7 +505,7 @@ The ISAP-1 computer will have an Instruction Set consisting of 31 instructions: 
 
 To modify the optimal control signals if we have to execute an extended instruction the Control Block must receive all 8 bits stored in the Instruction Register. This causes the block diagram of the Central Processing Unit of the ISAP-1 computer to be modified as follows:
 
-![ Figure 26 ](/Pictures/Figure26.png)
+![ Figure 28 ](/Pictures/Figure28.png)
 
 Compared to version 1.6 of the ISAP-1 Computer in version 1.7 we have:
 
