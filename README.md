@@ -578,7 +578,7 @@ The binary encoding of the Memory addressing mode is presented in the following 
 
 Control of each type of memory is done by using an external decoder
 
-![ Figure 27 ](/Pictures/Figure27.png)
+![ Figure 30 ](/Pictures/Figure30.png)
 
 Now we will have 23 command signals that must be provided by the Control Block compared to 25 in the previous version.
 
