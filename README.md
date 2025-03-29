@@ -109,7 +109,7 @@ I want to optimize these control signals by grouping them into three categories 
 - Signals that upon activation cause the controlled block to write data to the Bus, marked in red – only one such signal must be active at any time;
 - Signals that upon activation cause the controlled block to read data from the Bus, marked in green;
 - Signals that upon activation cause the controlled block to change its state but not transfer data to the Bus, marked in black
-- Signals that are part of the Command Bus, marked in blue.
+- Signals that are part of the Control Bus, marked in blue.
 
 Now the structure of the ISAP-1 Computer Central Processing Unit is:
 
@@ -124,9 +124,9 @@ The Control Unit is built from three blocks:
 - Step Counter,
 - Control Matrix.
 
-![ Figure 8 ](/Pictures/Figure8.png)
-
 The instruction decoder has the structure of a classic decoder and activates a single output depending on the instruction code presented at the input. The number of active outputs is equal to the number of instructions present in the Instruction Set.
+
+![ Figure 9 ](/Pictures/Figure9.png)
 
 The SAP-1 computer is based on micro-step control. For this purpose, a Step Counter block is required. The authors of the SAP-1 computer used a Ring Counter to implement the Step Counter.
 
