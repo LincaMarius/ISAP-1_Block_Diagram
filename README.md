@@ -288,13 +288,13 @@ The new Instruction Set is:
 
 | Mnemonic | Opcode | Operation                                                                 |
 |----------|--------|---------------------------------------------------------------------------|
-| LDA      | 0000   | Load RAM data into Accumulator                                            |
-| ADD      | 0001   | Add RAM data to Accumulator                                               |
-| SUB      | 0010   | Substract RAM data from Accumulator                                       |
-| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address |
-| JMP      | 0100   | Unconditional jump to the given address                                   |
-| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator       |
-| OUT      | 1110   | Load Accumulator data into Output device                                  |
+| LDA n    | 0000   | Load RAM data into Accumulator                                            |
+| ADD n    | 0001   | Add RAM data to Accumulator                                               |
+| SUB n    | 0010   | Substract RAM data from Accumulator                                       |
+| STA n    | 0011   | Stores the numeric value from the Accumulator at the given memory address |
+| JMP n    | 0100   | Unconditional jump to the given address                                   |
+| IN n     | 1101   | Loads the numeric value given by an input port into the Accumulator       |
+| OUT n    | 1110   | Load Accumulator data into Output device                                  |
 | HLT      | 1111   | Stop processing                                                           |
 
 ## Improving system design by adding Flags
@@ -363,17 +363,17 @@ The new Instruction Set is:
 
 | Mnemonic | Opcode | Operation                                                                     |
 |----------|--------|-------------------------------------------------------------------------------|
-| LDA      | 0000   | Load RAM data into Accumulator                                                |
-| ADD      | 0001   | Add RAM data to Accumulator                                                   |
-| SUB      | 0010   | Substract RAM data from Accumulator                                           |
-| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
-| JMP      | 0100   | Unconditional jump to the given address                                       |
-| JC       | 0101   | Jump if Carry Flag is set to the given address                                |
-| JZ       | 0110   | Jump if Zero Flag is set to the given address                                 |
-| JS       | 0111   | Jump if Sign Flag is set to the given address                                 |
-| CMP      | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
-| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
-| OUT      | 1110   | Load Accumulator data into Output device                                      |
+| LDA n    | 0000   | Load RAM data into Accumulator                                                |
+| ADD n    | 0001   | Add RAM data to Accumulator                                                   |
+| SUB n    | 0010   | Substract RAM data from Accumulator                                           |
+| STA n    | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
+| JMP n    | 0100   | Unconditional jump to the given address                                       |
+| JC n     | 0101   | Jump if Carry Flag is set to the given address                                |
+| JZ n     | 0110   | Jump if Zero Flag is set to the given address                                 |
+| JS n     | 0111   | Jump if Sign Flag is set to the given address                                 |
+| CMP n    | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
+| IN n     | 1101   | Loads the numeric value given by an input port into the Accumulator           |
+| OUT n    | 1110   | Load Accumulator data into Output device                                      |
 | HLT      | 1111   | Stop processing                                                               |
 
 ## Improving the system design by adding the Interrupt System
@@ -403,29 +403,29 @@ To allow working with input-output devices that do not act on the INT control si
 
 ![ Figure 25 ](/Pictures/Figure25.png)
 
-Now we will have 21 control signals that must be provided by the Control Block.
+Now we will have 19 control signals that must be provided by the Control Block.
 
 The new Instruction Set is:
 
 | Mnemonic | Opcode | Operation                                                                     |
 |----------|--------|-------------------------------------------------------------------------------|
-| LDA      | 0000   | Load RAM data into Accumulator                                                |
-| ADD      | 0001   | Add RAM data to Accumulator                                                   |
-| SUB      | 0010   | Substract RAM data from Accumulator                                           |
-| STA      | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
-| JMP      | 0100   | Unconditional jump to the given address                                       |
-| JC       | 0101   | Jump if Carry Flag is set to the given address                                |
-| JZ       | 0110   | Jump if Zero Flag is set to the given address                                 |
-| JS       | 0111   | Jump if Sign Flag is set to the given address                                 |
-| CMP      | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
+| LDA n    | 0000   | Load RAM data into Accumulator                                                |
+| ADD n    | 0001   | Add RAM data to Accumulator                                                   |
+| SUB n    | 0010   | Substract RAM data from Accumulator                                           |
+| STA n    | 0011   | Stores the numeric value from the Accumulator at the given memory address     |
+| JMP n    | 0100   | Unconditional jump to the given address                                       |
+| JC n     | 0101   | Jump if Carry Flag is set to the given address                                |
+| JZ n     | 0110   | Jump if Zero Flag is set to the given address                                 |
+| JS n     | 0111   | Jump if Sign Flag is set to the given address                                 |
+| CMP n    | 1000   | Compares a numeric value in memory with the numeric value in the accumulator  |
 | EI       | 1001   | Enable interrupts                                                             |
 | DI       | 1010   | Disable interrupts                                                            |
-| IN       | 1101   | Loads the numeric value given by an input port into the Accumulator           |
-| OUT      | 1110   | Load Accumulator data into Output device                                      |
+| IN n     | 1101   | Loads the numeric value given by an input port into the Accumulator           |
+| OUT n    | 1110   | Load Accumulator data into Output device                                      |
 | HLT      | 1111   | Stop processing                                                               |
 
 ## Improved system design by adding Stack
-I decided to add operations with the stack of this computer. This way I can implement subroutine calling as the first benefit. The stack also provides the ability to store data temporarily.
+I decided to add operations with the Stack of this computer. This way I can implement subroutine calling as the first benefit. The stack also provides the ability to store data temporarily.
 
 I will use a 4-bit register for the stack, since the address is 4 bits. This register must be incrementable as well as decrementable.
 
@@ -433,7 +433,7 @@ For this purpose we can use a counter. It must be able to be incremented but als
 
 The Block Diagram of the system that has implemented the Stack Pointer is shown in the following figure.
 
-![ Figure 24 ](/Pictures/Figure24.png)
+![ Figure 26 ](/Pictures/Figure26.png)
 
 Now we will have 25 command signals that must be provided by the Control Block.
 
