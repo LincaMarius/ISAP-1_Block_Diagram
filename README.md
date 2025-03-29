@@ -115,7 +115,6 @@ Now the structure of the ISAP-1 Computer Central Processing Unit is:
 
 ![ Figure 8 ](/Pictures/Figure8.png)
 
-
 ### Control Unit structure
 The SAP-1 computer has a Control Unit made using TTL logic gates.
 
@@ -137,7 +136,7 @@ The simplest output device that can be connected to this Computer is a Binary Di
 
 My version of the Block Diagram is identical to the original, except that I treated the original Output Register as a standalone block that is connected to the system buses as an Input/Output Device.
 
-![ Figure 8 ](/Pictures/Figure8.png)
+![ Figure 10 ](/Pictures/Figure10.png)
 
 The output device consists of a register where 8 bits are written when the I/O control signal is activated and the rising edge of the clock occurs. Each bit from the output of this register is connected to an LED. This is a Binary Display.
 
