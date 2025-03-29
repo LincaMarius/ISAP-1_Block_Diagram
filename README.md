@@ -622,7 +622,7 @@ The new Instruction Set of the ISAP-1 computer is:
 | CALL n   | 1001   | Subroutine call                                                               |
 | JMPF n   | 1010   | Unconditional far jump                                                        |
 | LAL n    | 1011   | Load immediate value into the lower Nibble of the Accumulator                 |
-| LAH      | 1100   | Load immediate value into the upper Nibble of the Accumulator                 |
+| LAH n     | 1100   | Load immediate value into the upper Nibble of the Accumulator                 |
 | IN n     | 1101   | Loads the numeric value given by an input port into the Accumulator           |
 | OUT n    | 1110   | Load Accumulator data into Output device                                      |
 | EXTENDED | 1111   | Prefix for instructions without parameters                                    |
