@@ -304,18 +304,17 @@ These Flags can be tested individually or in groups. For the ISAP-1 Computer I w
 
 The block diagram of the computer that has the Flags register added is as follows:
 
-![ Figure 22 ](/Pictures/Figure22.png)
+![ Figure 24 ](/Pictures/Figure24.png)
 
-I added the following control signals:
+I added the following control signal:
 - LF – Load Flags – load the Flags register with the value of the Flags signals present at the output of the Adder/Subtractor or Arithmetic and Logic Units
-- EF – Enable Flags – presents the contents of the Flags register on the Data Bus
 
 I have provided 3 Flags for the ISAP-1 computer:
 - The Carry Flag – is set if the 8-bit representation capacity of the result of an arithmetic operation is exceeded,
 - The Zero Flag – is set if the result of an arithmetic or logical operation is equal to zero,
 - The Sign Flag – is set if the result of an arithmetic or logical operation is negative.
 
-The Control Unit will select which Flag to check by commanding a multiplexer that must select one of the three Flags. So 2 selection signals are needed.
+The Control Unit will select which Flag to check by commanding a multiplexer that must select one of the three Flags. So, 2 selection signals are needed.
 
 The output of the multiplexer is the signal labeled “FLG” in the block diagram.
 
@@ -325,7 +324,7 @@ By using the solution that uses a multiplexer, we have 5 control inputs, so 2 ^ 
 
 To save the Flags states, the LF (load Flags) control signal is provided. If this is active and a rising edge of the clock signal appears, the Flags state presented at the Adder/Subtractor output is loaded into the Flags register.
 
-Now we will have 19 command signals that must be provided by the Control Block.
+Now we will have 17 command signals that must be provided by the Control Block.
 
 The presence of Flags allows us to implement conditional jump instructions:
 - JC – Jump if the Carry Flag is set
