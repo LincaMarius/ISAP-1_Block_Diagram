@@ -584,7 +584,7 @@ Now we will have 23 command signals that must be provided by the Control Block c
 
 Following the above changes, the ISAP-1 Computer Address Space is:
 
-![ Figure 28 ](/Pictures/Figure28.png)
+![ Figure 31 ](/Pictures/Figure31.png)
 
 Now the architecture of the ISAP-1 Computer is as follows
 
