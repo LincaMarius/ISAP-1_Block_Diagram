@@ -106,10 +106,10 @@ The LO signal was renamed I/O = Input/Output Device select
 If we look carefully at the control signals, we notice that they are placed in the order in which they appear in the Block Diagram from left to right and from top to bottom, according to Figure 1.
 
 I want to optimize these control signals by grouping them into three categories depending on how their activation determines an action on the Data Bus as follows:
-- Signals that upon activation cause the controlled block to write data to the Bus, marked in red – only one such signal must be active at any time;
-- Signals that upon activation cause the controlled block to read data from the Bus, marked in green;
-- Signals that upon activation cause the controlled block to change its state but not transfer data to the Bus, marked in black
-- Signals that are part of the Control Bus, marked in blue.
+- Signals that when activated cause the controlled block to write data to the Bus are marked in red – only one such signal must be active at any given time;
+- Signals that when activated cause the controlled block to read data from the Bus are marked in green;
+- Signals that when activated cause the controlled block to change its state but not transfer data to the Bus are marked in black
+- Signals that are part of the Command Bus are marked in blue.
 
 Now the structure of the ISAP-1 Computer Central Processing Unit is:
 
@@ -141,13 +141,13 @@ My version of the Block Diagram is identical to the original, except that I trea
 The output device consists of a register where 8 bits are written when the I/O control signal is activated and the rising edge of the clock occurs. Each bit from the output of this register is connected to an LED. This is a Binary Display.
 
 ### Memory Subsystem
-Figure 9 shows the Memory block of the SAP-1 computer.
+Figure 11 shows the Memory block of the SAP-1 computer.
 
 ![ Figure 11 ](/Pictures/Figure11.png)
 
 The Memory has two operating modes, dictated by the position of switch S2.
 
-When S2 is in the Run position, the PGM signal is low and causes the Address Multiplexer to select the Address from the input connected to the Memory Address Register. Also, the CE control signal is connected to the #CE control pin of the RAM.
+When S2 is in the "Run" position, the PGM signal is low and causes the Address Multiplexer to select the Address from the input connected to the Memory Address Register. Also, the CE control signal is connected to the #CE control pin of the RAM.
 
 The Diagram of the Memory Block in Run Mode is as follows
 
@@ -161,7 +161,7 @@ Thus, the Memory of the SAP-1 Computer in Run Mode is used as a ROM memory. Cont
 
 In this case, the CE control signal has the #CE function for chip activation but also the #OE (Output Enable) function specific to ROM memories.
 
-When switch S2 is in the Program Position, the PGM signal is high and causes the Address Multiplexer to select the address from the input connected to Address Select Switches S1.
+When switch S2 is in the "Program" Position, the PGM signal is high and causes the Address Multiplexer to select the address from the input connected to Address Select Switches S1.
 
 The control input #CE is set low, so at the Memory output, the Data from the Address selected by the Address Select Switches S1 are presented on the Bus.
 
@@ -195,9 +195,9 @@ The architecture of the ISAP-1 computer up to this point is as follows:
 ![ Figure 18 ](/Pictures/Figure18.png)
 
 We can distinguish the three subsystems of the computer:
-- The SAP-1 CPU
+- The ISAP-1 CPU
 - The Memory Subsystem
-- Outputs Subsystem
+- Inputs/Outputs Subsystem
 
 They are interconnected through the three buses:
 - 4-bit Address Bus
