@@ -14,7 +14,7 @@ https://github.com/LincaMarius
 ## About the project, brief description
 The goal of this project is to create a more efficient version of the SAP (Simple As Possible) Computer, but with minimal changes.
 
-## ISAP-1 version 1
+## ISAP-1 version 1.0
 
 The original Block Diagram of the SAP-1 Computer can be found in the book "Digital Computer Electronics" by Albert Paul Malvino and Jerald A. Brown, on page 141 and is labeled Figure 10-1.
 
