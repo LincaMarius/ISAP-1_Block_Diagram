@@ -37,7 +37,7 @@ d.	Press button S4 to write the new value to memory, \
 e.	Repeat steps b, c and d until all necessary changes have been made, \
 f.	Move selector S2 to the RUN position, to run the program.
 
-In practice, the content of the RAM memory is edited, after which its content is only read by the Computer.
+In practice, the content of the RAM memory is edited, after which its content is only read by the SAP-1 Computer.
 
 This Computer has no instruction to write data to memory. This is specific to read-only ROMs. So, one ROM can be used for each program.
 
