@@ -109,7 +109,7 @@ I want to optimize these control signals by grouping them into three categories 
 - Signals that when activated cause the controlled block to write data to the Bus are marked in red – only one such signal must be active at any given time;
 - Signals that when activated cause the controlled block to read data from the Bus are marked in green;
 - Signals that when activated cause the controlled block to change its state but not transfer data to the Bus are marked in black
-- Signals that are part of the Command Bus are marked in blue.
+- Signals that are part of the Commands Bus are marked in blue.
 
 Now the structure of the ISAP-1 Computer Central Processing Unit is:
 
@@ -129,7 +129,7 @@ The instruction decoder has the structure of a classic decoder and activates a s
 
 The SAP-1 computer is based on micro-step control. For this purpose, a Step Counter block is required. The authors of the SAP-1 computer used a Ring Counter to implement the Step Counter.
 
-The control matrix has the role of generating control signals depending on the instruction that is executed in accordance with the current micro-step.
+The Control Matrix has the role of generating control signals depending on the instruction that is executed in accordance with the current micro-step.
 
 ### Binary Display
 The simplest output device that can be connected to this Computer is a Binary Display. This device is used in the original construction of the SAP-1 Computer, where it is integrated directly into the structure of this Computer.
