@@ -1,4 +1,4 @@
-# ISAP-1 Block Diagram
+# ISAP-1 computer Block Diagram
 The ISAP-1 Computer is the improved version of the SAP-1 Computer made by me.
 
 ISAP Computer stands for Improved Simple as Possible Computer
@@ -67,7 +67,7 @@ A diagram representing a computing system consisting of functional blocks CPU, R
 
 ![ Figure 4 ](/Pictures/Figure4.png)
 
-If we check the diagram of the SAP-1 computer we notice that these functional blocks are not grouped, we also cannot identify the three buses on the diagram. We are presented with only the data bus labeled "W bus".
+If we check the diagram of the SAP-1 computer we notice that these functional blocks are not grouped, we also cannot identify the three buses on the diagram. We are presented with only the data bus labeled "W Bus".
 
 So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can easily separate these elements: CPU, RAM and I/O, as well as we can easily identify the three buses. We get the following block diagram.
 
