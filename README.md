@@ -52,13 +52,13 @@ The Block Diagram where only active high control signals are used, can be seen i
 
 ### Identification of Computer Components
 As we learned in school, a computer can be represented by 3 distinct functional blocks:
-- CPU,
-- Memory
-- I/O.
+- CPU (Central Processing Unit),
+- Memory,
+- I/O (Inputs / Outputs).
 
 They are interconnected through 3 buses that form the System Bus:
 - Data Bus,
-- Address Bus
+- Address Bus,
 - Control Bus.
 
 This fact is also presented by the authors in the Book in a simplified form on page 213 in figure 13-1.
@@ -69,7 +69,9 @@ A diagram representing a computing system consisting of functional blocks CPU, R
 
 If we check the diagram of the SAP-1 computer we notice that these functional blocks are not grouped, we also cannot identify the three buses on the diagram. We are presented with only the data bus labeled "W Bus".
 
-So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can easily separate these elements: CPU, RAM and I/O, as well as we can easily identify the three buses. We get the following block diagram.
+So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can easily separate these elements: CPU, RAM and I/O, as well as we can easily identify the three buses.
+
+We get the following block diagram:
 
 ![ Figure 5 ](/Pictures/Figure5.png)
 
@@ -87,7 +89,7 @@ Thus, from Figure 5 we will remove the following blocks:
 - Clock and Reset,
 - Power Supply.
 
-The resulting Block Diagram is shown in the following figure
+The resulting Block Diagram is shown in the following figure:
 
 ![ Figure 6 ](/Pictures/Figure6.png)
 
@@ -106,10 +108,10 @@ The LO signal was renamed I/O = Input/Output Device select
 If we look carefully at the control signals, we notice that they are placed in the order in which they appear in the Block Diagram from left to right and from top to bottom, according to Figure 1.
 
 I want to optimize these control signals by grouping them into three categories depending on how their activation determines an action on the Data Bus as follows:
-- Signals that when activated cause the controlled block to write data to the Bus are marked in red – only one such signal must be active at any given time;
-- Signals that when activated cause the controlled block to read data from the Bus are marked in green;
-- Signals that when activated cause the controlled block to change its state but not transfer data to the Bus are marked in black
-- Signals that are part of the Commands Bus are marked in blue.
+- Signals that when activated cause the commanded block to write data to the Data Bus are marked in red – only one such signal must be active at any given time;
+- Signals that when activated cause the commanded block to read data from the Data Bus are marked in green;
+- Signals that when activated cause the commanded block to change its state but not transfer data to the Data Bus are marked in black
+- Signals that are part of the Command Bus are marked in blue.
 
 Now the structure of the ISAP-1 Computer Central Processing Unit is:
 
