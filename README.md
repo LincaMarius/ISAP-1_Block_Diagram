@@ -118,7 +118,7 @@ Now the structure of the ISAP-1 Computer Central Processing Unit is:
 ![ Figure 8 ](/Pictures/Figure8.png)
 
 ### Control Unit structure
-The SAP-1 computer has a Control Unit made using TTL logic gates.
+The SAP-1 computer has a Control Unit made using logic gates.
 
 The Control Unit is built from three blocks:
 - Instruction Decoder,
