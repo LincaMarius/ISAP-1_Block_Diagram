@@ -93,7 +93,7 @@ The resulting Block Diagram is shown in the following figure:
 
 ![ Figure 6 ](/Pictures/Figure6.png)
 
-## ISAP-1 Architecture CPU version 1
+## ISAP-1 Architecture CPU version 1.0
 In order to highlight the three system buses, we must invert the positions of the Program Counter and the Memory Address Register in the diagram.
 
 Now I have renamed the Memory Address Register as the Address Register
@@ -108,10 +108,10 @@ The LO signal was renamed I/O = Input/Output Device select
 If we look carefully at the control signals, we notice that they are placed in the order in which they appear in the Block Diagram from left to right and from top to bottom, according to Figure 1.
 
 I want to optimize these control signals by grouping them into three categories depending on how their activation determines an action on the Data Bus as follows:
-- Signals that when activated cause the commanded block to write data to the Data Bus are marked in red – only one such signal must be active at any given time;
-- Signals that when activated cause the commanded block to read data from the Data Bus are marked in green;
-- Signals that when activated cause the commanded block to change its state but not transfer data to the Data Bus are marked in black
-- Signals that are part of the Command Bus are marked in blue.
+- Signals that when activated cause the commanded block to write data to the Data Bus are marked in RED – only one such signal must be active at any given time;
+- Signals that when activated cause the commanded block to read data from the Data Bus are marked in GREEN;
+- Signals that when activated cause the commanded block to change its state but not transfer data to the Data Bus are marked in BLACK;
+- Signals that are part of the Command Bus are marked in BLUE.
 
 Now the structure of the ISAP-1 Computer Central Processing Unit is:
 
