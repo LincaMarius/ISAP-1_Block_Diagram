@@ -1,4 +1,4 @@
-# ISAP-1 computer Block Diagram
+# ISAP-1 Computer Block Diagram
 The ISAP-1 Computer is the improved version of the SAP-1 Computer made by me.
 
 ISAP Computer stands for Improved Simple as Possible Computer
