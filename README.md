@@ -7,8 +7,6 @@ This is the first stage of the design of the ISAP-1 Computer and consists of the
 
 By: Lincă Marius Gheorghe,
 
-Pitești, Argeș, Romania, Europe.
-
 https://github.com/LincaMarius
 
 ## About the project, brief description
