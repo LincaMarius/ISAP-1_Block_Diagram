@@ -91,7 +91,7 @@ The resulting Block Diagram is shown in the following figure:
 
 ![ Figure 6 ](/Pictures/Figure6.png)
 
-## ISAP-1 Architecture CPU version 1.0
+## ISAP-1 Architecture CPU version 0.1
 In order to highlight the three system buses, we must invert the positions of the Program Counter and the Memory Address Register in the diagram.
 
 Now I have renamed the Memory Address Register as the Address Register
@@ -123,7 +123,7 @@ The Control Unit is built from three blocks:
 - Step Counter,
 - Control Matrix.
 
-The instruction decoder has the structure of a classic decoder and activates a single output depending on the instruction code presented at the input. The number of active outputs is equal to the number of instructions present in the Instruction Set.
+The Instruction Decoder has the structure of a classic decoder and activates a single output depending on the instruction code presented at the input. The number of active outputs is equal to the number of instructions present in the Instruction Set.
 
 ![ Figure 9 ](/Pictures/Figure9.png)
 
