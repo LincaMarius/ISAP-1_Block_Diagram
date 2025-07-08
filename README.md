@@ -91,7 +91,6 @@ The resulting Block Diagram is shown in the following figure:
 
 ![ Figure 6 ](/Pictures/Figure6.png)
 
-## ISAP-1 Architecture CPU version 0.1
 In order to highlight the three system buses, we must invert the positions of the Program Counter and the Memory Address Register in the diagram.
 
 Now I have renamed the Memory Address Register as the Address Register
@@ -224,3 +223,14 @@ From the analysis carried out so far we can draw the following conclusions:
 - jumps in the program cannot be made to perform repetitive tasks because it cannot be written to the Program Counter,
 - the Computer does not have a Stack, so program subroutines cannot be called,
 - there is no input device that allows manual data entry.
+
+## ISAP-1 Architecture CPU version 0.1
+Version 0.1 of the ISAP-1 computer must not have implemented any instructions from the original SAP-1 computer Instruction Set.
+
+Only the part of the computer that performs the Fetch portion of the instruction execution process needs to be implemented.
+
+Basically this means that the computer must be capable of executing the NOP instruction for any instruction executed.
+
+The timing diagram of the NOP instruction is shown in the following figure:
+
+![ Figure 19 ](/Pictures/Figure19.png)
