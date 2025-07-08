@@ -234,3 +234,25 @@ Basically this means that the computer must be capable of executing the NOP inst
 The timing diagram of the NOP instruction is shown in the following figure:
 
 ![ Figure 19 ](/Pictures/Figure19.png)
+
+The following actions performed by the computer can be observed depending on the microsteps T:
+- microstep T1 – EP active (Output Program Counter content on Bus) and LAR active (Load data from Bus into Address Register);
+- microstep T2 – CP active (Increment Program Counter);
+- microstep T3 – PM active (Output Program Memory content on Bus) and LI active (Load data from Bus into Instruction Register).
+
+The functional blocks of the SAP-1 computer and implicitly ISAP-1 that take part in these actions are:
+- Program Counter
+- Address Register
+- RAM Memory
+- Instruction Register
+
+For the computer to function, we still need to add the following blocks:
+- Power Supply
+- Control Unit
+- Reset
+- Clock
+- Selection Switches S5, S6 and S7.
+
+I propose to start from the SAP-1 computer architecture shown in figure 18:
+
+![ Figure 18 ](/Pictures/Figure18.png)
