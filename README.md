@@ -256,3 +256,18 @@ For the computer to function, we still need to add the following blocks:
 I propose to start from the SAP-1 computer architecture shown in figure 18:
 
 ![ Figure 18 ](/Pictures/Figure18.png)
+
+Since the ISAP-1 computer does not take into account the instruction read from memory, we do not need to implement Memory.
+
+By default we do not need to modify the memory contents so the Input Block is not necessary.
+
+There will be no OUT instruction, so the Outpum Block is not needed.
+
+So the architecture of the ISAP-1 version 0.1 computer is:
+
+![ Figure 20 ](/Pictures/Figure20.png)
+
+The following blocks must be implemented:
+- Central Processing Unit,
+- Reset,
+- Clock.
