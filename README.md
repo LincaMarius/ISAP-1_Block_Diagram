@@ -270,4 +270,21 @@ So the architecture of the ISAP-1 version 0.1 computer is:
 The following blocks must be implemented:
 - Central Processing Unit,
 - Reset,
-- Clock.
+- Clock,
+- Power supply.
+
+For the structure of the Processing Unit, we start from the diagram in figure 8:
+
+![ Figure 8 ](/Pictures/Figure8.png)
+
+We only keep the blocks:
+- Program Counter
+- Address Register
+- Instruction Register
+- Control Unit
+
+We obtain the following diagram:
+
+![ Figure 21 ](/Pictures/Figure21.png)
+
+
