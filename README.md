@@ -293,4 +293,4 @@ If we apply these changes to the Block Diagram in Figure 1:
 
 Result:
 
-
+![ Figure 22 ](/Pictures/Figure22.png)
