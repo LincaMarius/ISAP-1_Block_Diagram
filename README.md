@@ -294,3 +294,7 @@ If we apply these changes to the Block Diagram in Figure 1:
 Result:
 
 ![ Figure 22 ](/Pictures/Figure22.png)
+
+The structure of the Control Unit will be:
+
+![ Figure 23 ](/Pictures/Figure23.png)
