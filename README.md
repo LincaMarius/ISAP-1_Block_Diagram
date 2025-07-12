@@ -290,3 +290,7 @@ We obtain the following diagram:
 If we apply these changes to the Block Diagram in Figure 1:
 
 ![ Figure 1 ](/Pictures/Figure1.png)
+
+Result:
+
+
