@@ -47,7 +47,7 @@ The Block Diagram where only active high control signals are used, can be seen i
 
 ![ Figure 4 ](/Pictures/Figure4.png)
 
-### Identification of Computer Components
+## Identification of Computer Components
 As we learned in school, a computer can be represented by 3 distinct functional blocks:
 - CPU (Central Processing Unit),
 - Memory,
@@ -62,7 +62,7 @@ This fact is also presented by the authors in the Book in a simplified form on p
 
 A diagram representing a computing system consisting of functional blocks CPU, RAM, I/O and buses is presented in the following figure.
 
-![ Figure 4 ](/Pictures/Figure4.png)
+![ Figure 5 ](/Pictures/Figure5.png)
 
 If we check the diagram of the SAP-1 computer we notice that these functional blocks are not grouped, we also cannot identify the three buses on the diagram. We are presented with only the data bus labeled "W Bus".
 
