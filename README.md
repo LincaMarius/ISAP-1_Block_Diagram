@@ -72,10 +72,10 @@ We get the following Block Diagram:
 
 ![ Figure 6 ](/Pictures/Figure6.png)
 
-### Separation of the Central Processing Unit
-I propose separating the component blocks of the Central Processing Unit from the other blocks of the computer. This way we will be able to focus on improving the design of only the Central Processing Unit as an entity independent of the other constructive elements of the SAP-1 Computer.
+## Separation of the Central Processing Unit
+I propose separating the component blocks of the Central Processing Unit from the other blocks of the computer. This way we will be able to focus on improving the design of only the Central Processing Unit as an entity independent of the other constructive elements of the ISAP-1 Computer.
 
-Thus, from Figure 5 we will remove the following blocks:
+Thus, from [Figure 6](/Pictures/Figure6.png) we will remove the following blocks:
 - Address Select Switches,
 - Program / Run Selector + Deposit,
 - Data Select Switches,
@@ -88,7 +88,7 @@ Thus, from Figure 5 we will remove the following blocks:
 
 The resulting Block Diagram is shown in the following figure:
 
-![ Figure 6 ](/Pictures/Figure6.png)
+![ Figure 7 ](/Pictures/Figure7.png)
 
 In order to highlight the three system buses, we must invert the positions of the Program Counter and the Memory Address Register in the diagram.
 
