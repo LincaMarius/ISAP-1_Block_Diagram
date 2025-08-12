@@ -94,7 +94,7 @@ In order to highlight the three system buses, we must invert the positions of th
 
 Now I have renamed the Memory Address Register as the Address Register
 
-![ Figure 7 ](/Pictures/Figure7.png)
+![ Figure 8 ](/Pictures/Figure8.png)
 
 The CE signal was renamed PM = Program Memory select \
 The LM signal was renamed LAR = Load Address Register \
