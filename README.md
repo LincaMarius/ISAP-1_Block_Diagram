@@ -19,10 +19,10 @@ In the following figure, I present a reproduction of the original Block Diagram 
 
 ![ Figure 2 ](/Pictures/Figure2.png)
 
-### More detailed Block Diagram
+## More detailed Block Diagram
 I studied the original schematic of the SAP-1 Computer and recreated the Block Diagram to represent the actual functional blocks as closely as possible and I present it in the following figure.
 
-![ Figure 2 ](/Pictures/Figure2.png)
+![ Figure 3 ](/Pictures/Figure3.png)
 
 The HLT control signal was omitted in the original Block Diagram.
 
