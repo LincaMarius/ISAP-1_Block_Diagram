@@ -68,9 +68,9 @@ If we check the diagram of the SAP-1 computer we notice that these functional bl
 
 So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can easily separate these elements: CPU, RAM and I/O, as well as we can easily identify the three buses.
 
-We get the following block diagram:
+We get the following Block Diagram:
 
-![ Figure 5 ](/Pictures/Figure5.png)
+![ Figure 6 ](/Pictures/Figure6.png)
 
 ### Separation of the Central Processing Unit
 I propose separating the component blocks of the Central Processing Unit from the other blocks of the computer. This way we will be able to focus on improving the design of only the Central Processing Unit as an entity independent of the other constructive elements of the SAP-1 Computer.
