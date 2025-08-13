@@ -113,7 +113,7 @@ Now the structure of the ISAP-1 Computer Central Processing Unit is:
 
 ![ Figure 9 ](/Pictures/Figure9.png)
 
-### Control Unit structure
+## Control Unit structure
 The SAP-1 computer has a Control Unit made using logic gates.
 
 The Control Unit is built from three blocks:
@@ -123,7 +123,7 @@ The Control Unit is built from three blocks:
 
 The Instruction Decoder has the structure of a classic decoder and activates a single output depending on the instruction code presented at the input. The number of active outputs is equal to the number of instructions present in the Instruction Set.
 
-![ Figure 9 ](/Pictures/Figure9.png)
+![ Figure 10 ](/Pictures/Figure10.png)
 
 The SAP-1 computer is based on micro-step control. For this purpose, a Step Counter block is required. The authors of the SAP-1 computer used a Ring Counter to implement the Step Counter.
 
