@@ -149,7 +149,7 @@ When S2 is in the "Run" position, the PGM signal is low and causes the Address M
 
 The Diagram of the Memory Block in Run Mode is as follows
 
-![ Figure 12 ](/Pictures/Figure12.png)
+![ Figure 13 ](/Pictures/Figure13.png)
 
 From this Diagram the Multiplexer can be ignored and we can obtain a simpler and easier to understand Diagram.
 
