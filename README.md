@@ -70,7 +70,7 @@ So, I propose to redraw the Block Diagram of the SAP-1 computer so that we can e
 
 We get the following Block Diagram:
 
-![ Figure 6 ](/Pictures/Figure6.png)
+![ Figure 11 ](/Pictures/Figure11.png)
 
 ## Separation of the Central Processing Unit
 I propose separating the component blocks of the Central Processing Unit from the other blocks of the computer. This way we will be able to focus on improving the design of only the Central Processing Unit as an entity independent of the other constructive elements of the ISAP-1 Computer.
