@@ -216,12 +216,9 @@ The output of the multiplexer is taken by the buffer. Its role is to ensure the 
 ![ Figure 20 ](/Pictures/Figure20.png)
 
 ## SAP-1 computer architecture
-The clock signal is responsible for ensuring synchronous operation of the computer, so that any action takes place at a precise moment in time. Through synchronization, data transfer in the system occurs in a controlled manner.
-
-
 The architecture of the ISAP-1 computer up to this point is as follows:
 
-![ Figure 18 ](/Pictures/Figure18.png)
+![ Figure 21 ](/Pictures/Figure21.png)
 
 We can distinguish the three subsystems of the computer:
 - The ISAP-1 CPU
