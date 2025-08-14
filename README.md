@@ -134,12 +134,12 @@ The SAP-1 computer is based on micro-step control. For this purpose, a Step Coun
 
 The Control Matrix has the role of generating control signals depending on the instruction that is executed in accordance with the current micro-step.
 
-## Binary Display
+### Binary Display
 The simplest output device that can be connected to this Computer is a Binary Display. This device is used in the original construction of the SAP-1 Computer, where it is integrated directly into the structure of this Computer.
 
 My version of the Block Diagram is identical to the original, except that I treated the original Output Register as a standalone block that is connected to the system buses as an Input/Output Device.
 
-![ Figure 11 ](/Pictures/Figure11.png)
+![ Figure 16 ](/Pictures/Figure16.png)
 
 The output device consists of a register where 8 bits are written when the I/O control signal is activated and the rising edge of the clock occurs. Each bit from the output of this register is connected to an LED. This is a Binary Display.
 
