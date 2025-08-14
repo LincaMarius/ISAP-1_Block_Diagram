@@ -201,7 +201,7 @@ The block diagram of the reset circuit is shown in the following figure
 
 The circuit consists of a switch marked S5 with two positions followed by a debouncing circuit consisting of an RS flip-flop in the case of the SAP-1 computer.
 
-## Clock generator circuit
+### Clock generator circuit
 The clock signal is responsible for ensuring synchronous operation of the computer, so that any action takes place at a precise moment in time. Through synchronization, data transfer in the system occurs in a controlled manner.
 
 The SAP-1 computer has two operating modes:
@@ -216,9 +216,9 @@ The switch marked S7 in the schematic is used to select the operating mode. This
 
 Depending on the chosen operating mode, one of the two clock signals is selected using a multiplexer.
 
-The output of the multiplexer is taken by the buffer. Its role is to ensure the necessary fanout as the clock signal reaches all the components of the computer.
+The output of the multiplexer is taken by the buffer. Its role is to ensure the necessary fanout because the clock signal reaches all the functional blocks of the computer.
 
-![ Figure 20 ](/Pictures/Figure20.png)
+![ Figure 25 ](/Pictures/Figure25.png)
 
 ## SAP-1 computer architecture
 The architecture of the ISAP-1 computer up to this point is as follows:
