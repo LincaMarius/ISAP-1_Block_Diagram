@@ -192,12 +192,12 @@ We can synthesize a Block Diagram for the Memory Subsystem of the SAP-1 and ISAP
 
 We can see an increased complexity of the Memory Subsystem imposed by the need to modify the contents of the Memory using the Control Panel switches.
 
-## Reset Circuit
+### Reset Circuit
 The Reset circuit has the role of bringing the computer back to its initial state. Internally, the Central Processing Unit initializes the functional blocks so that they can begin stable execution of any program.
 
 The block diagram of the reset circuit is shown in the following figure
 
-![ Figure 19 ](/Pictures/Figure19.png)
+![ Figure 24 ](/Pictures/Figure24.png)
 
 The circuit consists of a switch marked S5 with two positions followed by a debouncing circuit consisting of an RS flip-flop in the case of the SAP-1 computer.
 
