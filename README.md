@@ -250,3 +250,18 @@ From the analysis carried out so far we can draw the following conclusions:
 - jumps in the program cannot be made to perform repetitive tasks because it cannot be written to the Program Counter,
 - the Computer does not have a Stack, so program subroutines cannot be called,
 - there is no input device that allows manual data entry.
+
+## ISAP-1 Computer version 0.1
+For version 0.1 we need to implement the FETCH portion of an instruction execution. This is equivalent to implementing the NOP instruction.
+
+The starting point is the timing diagram of the NOP instruction shown in the following figure.
+
+![ Figure 1 ](https://github.com/LincaMarius/ISAP-1_Instruction_Set/blob/main/Pictures/Figure1.png)
+
+The functional blocks that participate in the execution of the NOP instruction are:
+- Program Counter
+- Address Register
+- RAM – can be ignored because we are not decoding the instructions
+- Instruction Register
+
+These alone are not enough to ensure the execution of the NOP instruction. The remaining functional blocks that are required can be determined from the following figure:
