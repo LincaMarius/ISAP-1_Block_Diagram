@@ -17,7 +17,7 @@ The original Block Diagram of the SAP-1 Computer can be found in the book "Digit
 
 In the following figure, I present a reproduction of the original Block Diagram of the SAP-1 Computer.
 
-![ Figure 2 ](/Pictures/Figure2.png)
+![ Figure 7 ](/Pictures/Figure7.png)
 
 ## More detailed Block Diagram
 I studied the original schematic of the SAP-1 Computer and recreated the Block Diagram to represent the actual functional blocks as closely as possible and I present it in the following figure.
@@ -265,3 +265,12 @@ The functional blocks that participate in the execution of the NOP instruction a
 - Instruction Register
 
 These alone are not enough to ensure the execution of the NOP instruction. The remaining functional blocks that are required can be determined from the following figure:
+
+![ Figure 21 ](/Pictures/Figure21.png)
+
+We will also need the following circuits:
+- Clock
+- Reset
+
+From the structure of the Central Processing Unit shown in the following figure
+
