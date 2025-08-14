@@ -62,7 +62,7 @@ This fact is also presented by the authors in the Book in a simplified form on p
 
 A diagram representing a computing system consisting of functional blocks CPU, RAM, I/O and buses is presented in the following figure.
 
-![ Figure 5 ](/Pictures/Figure5.png)
+![ Figure 10 ](/Pictures/Figure10.png)
 
 If we check the diagram of the SAP-1 computer we notice that these functional blocks are not grouped, we also cannot identify the three buses on the diagram. We are presented with only the data bus labeled "W Bus".
 
