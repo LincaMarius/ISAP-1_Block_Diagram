@@ -105,8 +105,8 @@ The CE signal was renamed PM = Program Memory select \
 The LM signal was renamed LAR = Load Address Register \
 The LO signal was renamed I/O = Input/Output Device select
 
-## Grouping Control Signals
-If we look carefully at the control signals, we notice that they are placed in the order in which they appear in the Block Diagram from left to right and from top to bottom, according to [Figure 1](/Pictures/Figure1.png)
+### Grouping Control Signals
+If we look carefully at the control signals, we notice that they are placed in the order in which they appear in the Block Diagram from left to right and from top to bottom, according to [Figure 7](/Pictures/Figure7.png)
 
 I want to optimize these control signals by grouping them into three categories depending on how their activation determines an action on the Data Bus as follows:
 - Signals that when activated cause the commanded block to write data to the Data Bus are marked in RED – only one such signal must be active at any given time;
@@ -116,7 +116,7 @@ I want to optimize these control signals by grouping them into three categories 
 
 Now the structure of the ISAP-1 Computer Central Processing Unit is:
 
-![ Figure 9 ](/Pictures/Figure9.png)
+![ Figure 14 ](/Pictures/Figure14.png)
 
 ## Control Unit structure
 The SAP-1 computer has a Control Unit made using logic gates.
