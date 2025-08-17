@@ -105,19 +105,6 @@ The CE signal was renamed PM = Program Memory select \
 The LM signal was renamed LAR = Load Address Register \
 The LO signal was renamed I/O = Input/Output Device select
 
-### Grouping Control Signals
-If we look carefully at the control signals, we notice that they are placed in the order in which they appear in the Block Diagram from left to right and from top to bottom, according to [Figure 7](/Pictures/Figure7.png)
-
-I want to optimize these control signals by grouping them into three categories depending on how their activation determines an action on the Data Bus as follows:
-- Signals that when activated cause the commanded block to write data to the Data Bus are marked in RED – only one such signal must be active at any given time;
-- Signals that when activated cause the commanded block to read data from the Data Bus are marked in GREEN;
-- Signals that when activated cause the commanded block to change its state but not transfer data to the Data Bus are marked in BLACK;
-- Signals that are part of the Command Bus are marked in BLUE.
-
-Now the structure of the ISAP-1 Computer Central Processing Unit is:
-
-![ Figure 14 ](/Pictures/Figure14.png)
-
 ### Control Unit structure
 The SAP-1 computer has a Control Unit made using logic gates.
 
@@ -128,7 +115,7 @@ The Control Unit is built from three blocks:
 
 The Instruction Decoder has the structure of a classic decoder and activates a single output depending on the instruction code presented at the input. The number of active outputs is equal to the number of instructions present in the Instruction Set.
 
-![ Figure 15 ](/Pictures/Figure15.png)
+![ Figure 14 ](/Pictures/Figure14.png)
 
 The SAP-1 computer is based on micro-step control. For this purpose, a Step Counter block is required. The authors of the SAP-1 computer used a Ring Counter to implement the Step Counter.
 
